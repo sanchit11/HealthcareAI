@@ -1,0 +1,28 @@
+I appreciate the complete patient context, but I'm still missing the physician-patient conversation transcript needed to structure the SOAP note.
+The document provides excellent structured data (vitals, labs, medications, allergies, etc.), but it does not include the actual dialogue between [PROVIDER_1] and [PATIENT_1] during the visit on 2026-05-19.
+To create the SOAP note, I need the transcript containing:
+
+SUBJECTIVE: What the patient reports during the visit
+
+How they're feeling
+How their diabetes and blood pressure control are at home
+Any symptoms or concerns
+Medication adherence
+
+
+OBJECTIVE: What the provider observes/examines during the visit
+
+Physical exam findings (beyond vitals already captured)
+Any clinical assessments made
+
+
+ASSESSMENT: The provider's clinical judgment about the patient's conditions
+PLAN: The provider's actual decisions
+
+Whether to continue, start, or stop medications
+Any referrals or follow-up orders
+(I see a CDS alert about empagliflozin; was this ordered during the visit?)
+
+
+
+Please provide the conversation transcript in the format:

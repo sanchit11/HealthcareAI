@@ -1,0 +1,155 @@
+You are an AI medical scribe integrated into an EHR.
+
+Convert the following encounter transcript into a complete SOAP note.
+
+Requirements:
+- Use concise clinician documentation style
+- Extract clinically relevant information
+- Include pertinent positives and negatives
+- Remove conversational filler
+- Generate:
+  - Subjective
+  - Objective
+  - Assessment
+  - Plan
+- Do not hallucinate findings
+- If uncertain, omit information
+- Use the following format:
+  - Subjective: [Subjective section]
+  - Objective: [Objective section]
+  - Assessment: [Assessment section]
+  - Plan: [Plan section]
+Desired Output: 
+ {
+    "subjective" : "<String>",
+    "objective" : "<String>",
+    "assessment" : "<String>",
+    "plan" : "<String>",
+    "confidence_score: <float or decimal value>
+
+ }
+
+
+The input for getting the SOAP response is below:
+{
+  "action": "generate_soap",
+
+  "ambient_details": {
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_time": "14:30",
+    "encounter_type": "Office Visit",
+    "duration_seconds": 420,
+    "status": "complete",
+    "provider_token": "[PROVIDER_1]",
+    "provider_credentials": "MD, Internal Medicine",
+    "clinic_name": "City Health Center",
+    "location": "Primary Care Clinic, Belagavi",
+
+    "raw_transcript": "Patient is a 47-year-old female presenting with complaints of chest pain for the past 3 days. The pain is described as a pressure-like sensation localized to the left-sided chest, radiating to her left shoulder. She rates the pain as 6 out of 10. Associated symptoms include mild shortness of breath on exertion. She denies diaphoresis or syncope. Patient has a past medical history of hypertension and Type 2 Diabetes. She is compliant with her current home medications, Metformin and Lisinopril. Her recent labs show an A1c of 7.8% from 3 months ago. Vital signs show BP 148/92, HR 88, RR 22, Temp 98.6F, and O2 Sat 98% on room air. Physical exam reveals an alert, mildly anxious patient with a regular rate and rhythm, no murmurs, rubs, or gallops, and lungs clear to auscultation bilaterally. EKG shows normal sinus rhythm with no acute ST changes. Troponin I 0.02 ng/mL (normal <0.04). Patient is concerned about having a heart attack.",
+    "diarized_transcript": [
+      {
+        "speaker": "Doctor",
+        "text": "What brings you in today?",
+        "start_ms": 0,
+        "end_ms": 3000
+      },
+      {
+        "speaker": "Patient",
+        "text": "I've had chest pressure for about 3 days.",
+        "start_ms": 3000,
+        "end_ms": 8000
+      },
+      {
+        "speaker": "Patient",
+        "text": "It's on the left side and sometimes goes into my shoulder.",
+        "start_ms": 8000,
+        "end_ms": 14000
+      },
+      {
+        "speaker": "Patient",
+        "text": "About 6 out of 10.",
+        "start_ms": 14000,
+        "end_ms": 17000
+      },
+      {
+        "speaker": "Patient",
+        "text": "I get short of breath walking upstairs.",
+        "start_ms": 17000,
+        "end_ms": 22000
+      },
+      {
+        "speaker": "Patient",
+        "text": "No sweating or passing out.",
+        "start_ms": 22000,
+        "end_ms": 27000
+      },
+      {
+        "speaker": "Doctor",
+        "text": "Still taking metformin and lisinopril?",
+        "start_ms": 27000,
+        "end_ms": 32000
+      },
+      {
+        "speaker": "Patient",
+        "text": "Yes daily.",
+        "start_ms": 32000,
+        "end_ms": 35000
+      },
+      {
+        "speaker": "Doctor",
+        "text": "History of hypertension and diabetes noted.",
+        "start_ms": 35000,
+        "end_ms": 40000
+      }
+    ]
+
+  },
+
+  "patient_context": {
+    "demographics": {
+      "age": 47,
+      "sex": "female"
+    },
+    "chief_complaint": "chest pain",
+    "hpi": {
+      "duration": "3 days",
+      "quality": "pressure-like",
+      "severity": "6/10",
+      "location": "left-sided chest",
+      "radiation": "left shoulder"
+    },
+    "associated_symptoms": [
+      "mild shortness of breath on exertion"
+    ],
+    "pertinent_negatives": [
+      "no diaphoresis",
+      "no syncope"
+    ],
+    "pmh": [
+      "hypertension",
+      "type 2 diabetes"
+    ],
+    "medications": [
+      "metformin",
+      "lisinopril"
+    ],
+    "medication_adherence": true,
+    "recent_labs": {
+      "A1c": "7.8% (3 months ago)"
+    },
+    "vitals": {
+      "BP": "148/92",
+      "HR": 88,
+      "RR": 22,
+      "Temp": "98.6 F",
+      "SpO2": "98% RA"
+    },
+    "physical_exam": {
+      "general": "alert, mildly anxious",
+      "cv": "RRR, no murmur/rub/gallop",
+      "lungs": "CTA bilaterally"
+    }
+  }
+}

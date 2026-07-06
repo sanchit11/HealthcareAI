@@ -1,0 +1,313 @@
+{
+  "soap_note": {
+    "metadata": {
+      "session_id": "sess_20260521_143000_001",
+      "encounter_id": 1,
+      "encounter_date": "2026-05-21",
+      "encounter_time": "14:30",
+      "encounter_type": "Office Visit",
+      "provider_name": "Dr. Sarah Mitchell, MD",
+      "provider_specialty": "Internal Medicine",
+      "clinic_name": "City Health Center",
+      "location": "Primary Care Clinic, Belagavi",
+      "patient_details": {
+        "patient_id": "PT_2026_45821",
+        "first_name": "Priya",
+        "last_name": "Johnson",
+        "age": 55,
+        "gender": "Female",
+        "date_of_birth": "1970-11-15"
+      }
+    },
+    "subjective": {
+      "chief_complaint": "Persistent chest pain and shortness of breath for 3 days.",
+      "history_of_present_illness": {
+        "onset": "3 days ago",
+        "trigger": "Onset occurred while patient was sitting and working at her desk.",
+        "character": "Dull, pressure-like sensation located in the center of the chest.",
+        "radiation": "Radiating to the left arm.",
+        "severity": "7 out of 10",
+        "duration": "Persistent over the past 3 days.",
+        "associated_symptoms": [
+          "Shortness of breath",
+          "Mild diaphoresis (sweating)",
+          "Nausea",
+          "Decreased appetite"
+        ],
+        "pertinent_negatives": [
+          "Denies fever",
+          "Denies cough"
+        ],
+        "impact_on_functioning": "Causes significant distress; patient expresses explicit concern that she may be experiencing a heart attack."
+      },
+      "past_medical_history": [
+        {
+          "condition": "Type 2 Diabetes Mellitus",
+          "duration_years": 12,
+          "status": "Active, suboptimally controlled based on recent labs"
+        },
+        {
+          "condition": "Essential Hypertension",
+          "duration_years": 8,
+          "status": "Active, elevated on current therapeutic regimen"
+        },
+        {
+          "condition": "Dyslipidemia",
+          "duration_years": 7,
+          "status": "Active"
+        }
+      ],
+      "social_history": {
+        "tobacco_use": "Never smoker",
+        "alcohol_use": "None",
+        "recreational_drug_use": "Denies",
+        "occupation": "Office Manager",
+        "stress_level": "High stress at work",
+        "sleep_patterns": "Poor sleep quality, averaging 5 hours per night"
+      },
+      "family_history": {
+        "mother": "Hypertension, Type 2 Diabetes Mellitus",
+        "father": "Myocardial Infarction at age 65",
+        "siblings": "None"
+      },
+      "allergies": [
+        {
+          "allergen": "Penicillin",
+          "allergen_type": "Antibiotic",
+          "severity": "MODERATE",
+          "reaction": "Nausea and mild rash",
+          "documented_date": "2015-03-10"
+        }
+      ]
+    },
+    "objective": {
+      "vital_signs": {
+        "blood_pressure": "148/92 mmHg",
+        "heart_rate": "88 bpm",
+        "respiratory_rate": "20 breaths/min",
+        "temperature": "98.6 F",
+        "oxygen_saturation": "96% on room air",
+        "height": "162 cm",
+        "weight": "72 kg",
+        "bmi": "27.4",
+        "bmi_category": "Overweight"
+      },
+      "current_medications": [
+        {
+          "drug_name": "Metformin",
+          "dosage": "500 mg",
+          "frequency": "BID",
+          "route": "Oral",
+          "indication": "Type 2 Diabetes Mellitus"
+        },
+        {
+          "drug_name": "Lisinopril",
+          "dosage": "10 mg",
+          "frequency": "OD",
+          "route": "Oral",
+          "indication": "Essential Hypertension"
+        },
+        {
+          "drug_name": "Atorvastatin",
+          "dosage": "20 mg",
+          "frequency": "OD",
+          "route": "Oral",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "lab_results": {
+        "collection_date": "2026-05-21",
+        "panels": [
+          {
+            "test_name": "Fasting Glucose",
+            "value": 156,
+            "unit": "mg/dL",
+            "reference_range": "70-100",
+            "status": "HIGH"
+          },
+          {
+            "test_name": "Hemoglobin A1C",
+            "value": 7.2,
+            "unit": "%",
+            "reference_range": "<5.7",
+            "status": "HIGH"
+          },
+          {
+            "test_name": "Troponin I",
+            "value": 0.02,
+            "unit": "ng/mL",
+            "reference_range": "<0.04",
+            "status": "NORMAL"
+          },
+          {
+            "test_name": "Serum Creatinine",
+            "value": 0.9,
+            "unit": "mg/dL",
+            "reference_range": "0.6-1.2",
+            "status": "NORMAL"
+          },
+          {
+            "test_name": "eGFR",
+            "value": 82,
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">60",
+            "status": "NORMAL"
+          }
+        ]
+      },
+      "diagnostic_tests": [
+        {
+          "test_name": "12-Lead Electrocardiogram (EKG)",
+          "test_date": "2026-05-21",
+          "result": "Normal sinus rhythm, no acute ST changes, no T-wave inversions",
+          "interpretation": "No acute ischemic changes visible at time of evaluation."
+        }
+      ]
+    },
+    "assessment": {
+      "clinical_impression": "A 55-year-old female with multiple high-risk cardiovascular comorbidities (Type 2 Diabetes, Hypertension, Dyslipidemia, and paternal history of early MI) presents with typical cardiac chest pain symptoms (dull, central, pressure-like chest pain radiating to the left arm, accompanied by dyspnea, diaphoresis, and nausea) persisting for 3 days. While initial cardiac workup is reassuring with negative serial/initial Troponin I and a non-ischemic EKG, an acute coronary syndrome (ACS) or unstable angina cannot be fully ruled out due to her high risk profile and symptomatic presentation. Blood pressure is suboptimally controlled at 148/92, and glycemic parameters are elevated (A1C 7.2%, Fasting Glucose 156 mg/dL), potentially compounded by occupational stress and poor sleep.",
+      "diagnoses": {
+        "primary": {
+          "condition": "Precordial pain / Left-sided chest pain",
+          "icd10_code": "R07.2",
+          "icd10_description": "Precordial pain",
+          "snomed_ct_code": "29857009",
+          "snomed_description": "Chest pain",
+          "confidence_score": 0.95,
+          "status": "Active symptom needing rule-out of acute pathology"
+        },
+        "differentials": [
+          {
+            "rank": 1,
+            "condition": "Angina pectoris, unspecified",
+            "icd10_code": "I20.9",
+            "icd10_description": "Angina pectoris, unspecified",
+            "snomed_ct_code": "429559002",
+            "snomed_description": "Angina pectoris",
+            "confidence_score": 0.85,
+            "reasoning": "High clinical index of suspicion due to standard radiation to left arm, dull pressure quality, and extensive cardiovascular risk factors."
+          },
+          {
+            "rank": 2,
+            "condition": "Anxiety disorder, unspecified / Stress-induced chest pain",
+            "icd10_code": "F41.9",
+            "icd10_description": "Anxiety disorder, unspecified",
+            "snomed_ct_code": "197480005",
+            "snomed_description": "Anxiety disorder",
+            "confidence_score": 0.6,
+            "reasoning": "Supported by documented history of high work stress and poor sleep patterns, though cardiac etiologies must be definitively excluded first."
+          },
+          {
+            "rank": 3,
+            "condition": "Gastro-esophageal reflux disease without esophagitis",
+            "icd10_code": "K21.9",
+            "icd10_description": "Gastro-esophageal reflux disease without esophagitis",
+            "snomed_ct_code": "235595009",
+            "snomed_description": "Gastroesophageal reflux disease",
+            "confidence_score": 0.55,
+            "reasoning": "Can manifest as center-chest pressure accompanied by nausea, though atypical for left-arm radiation."
+          }
+        ],
+        "co_morbidities": [
+          {
+            "condition": "Type 2 Diabetes Mellitus without complications",
+            "icd10_code": "E11.9",
+            "snomed_ct_code": "44054006"
+          },
+          {
+            "condition": "Essential Hypertension",
+            "icd10_code": "I10",
+            "snomed_ct_code": "38341003"
+          },
+          {
+            "condition": "Dyslipidemia",
+            "icd10_code": "E78.5",
+            "snomed_ct_code": "116289008"
+          }
+        ]
+      }
+    },
+    "plan": {
+      "diagnostic_testing": [
+        "Urgent outpatient Cardiology workup including scheduled Echocardiogram and Cardiac Stress Testing as determined by specialist."
+      ],
+      "medications": {
+        "new_prescriptions": [
+          {
+            "drug_name": "Aspirin",
+            "dosage": "81 mg",
+            "frequency": "Once daily",
+            "route": "Oral",
+            "status": "Initiated immediately for cardioprotection",
+            "indication": "Suspected cardiac chest pain / ischemic risk mitigation"
+          }
+        ],
+        "continuations": [
+          {
+            "drug_name": "Metformin",
+            "dosage": "500 mg",
+            "frequency": "BID",
+            "route": "Oral",
+            "instructions": "Continue unchanged; status will be re-evaluated post-cardiology clearance given elevated HbA1C."
+          },
+          {
+            "drug_name": "Lisinopril",
+            "dosage": "10 mg",
+            "frequency": "OD",
+            "route": "Oral",
+            "instructions": "Continue current dose; blood pressure is elevated at 148/92, to be optimized at follow-up."
+          },
+          {
+            "drug_name": "Atorvastatin",
+            "dosage": "20 mg",
+            "frequency": "OD",
+            "route": "Oral",
+            "instructions": "Continue current regimen unchanged."
+          }
+        ]
+      },
+      "referrals": [
+        {
+          "specialty": "Cardiology",
+          "urgency": "Urgent (within the current week)",
+          "reason": "Comprehensive evaluation of 3-day history of pressure-like chest pain radiating to left arm with high metabolic risk factors."
+        }
+      ],
+      "patient_education_and_counseling": [
+        "Reassured patient that current objective indicators (EKG, initial Troponin) do not show evidence of an active, acute myocardial infarction, but emphasized the necessity of comprehensive testing via cardiology.",
+        "Counselled extensively on strict sleep hygiene practices to increase nightly rest beyond the current 5 hours.",
+        "Discussed stress reduction strategies in her role as an office manager to mitigate sympathetic triggers."
+      ],
+      "safety_precautions": [
+        "Provided explicit red-flag instructions: Patient must proceed immediately to the nearest Emergency Department or call emergency medical services if she experiences worsening chest pain, increased shortness of breath, severe diaphoresis, dizziness, syncope, or jaw/back pain."
+      ],
+      "follow_up_timeline": "Return to the primary care clinic within 1 to 2 weeks, immediately following the scheduled outpatient specialist evaluation, or sooner if symptoms change."
+    },
+    "safety_checks": {
+      "allergy_verification": {
+        "status": "PASSED",
+        "details": "Patient has a documented moderate allergy to Penicillin (nausea/rash). No beta-lactam or related antibiotics were indicated or prescribed during this encounter. Aspirin therapy carries no cross-reactivity with penicillin."
+      },
+      "drug_drug_interactions": {
+        "status": "PASSED",
+        "details": "Concomitant use of Aspirin 81 mg daily with Lisinopril 10 mg requires monitoring for potential minor reductions in antihypertensive efficacy and monitoring of renal function. Patient's baseline eGFR is normal (82 mL/min/1.73m2) and creatinine is stable (0.9 mg/dL). No major contraindications found."
+      },
+      "contraindications_assessment": {
+        "status": "PASSED",
+        "details": "Metformin use is safe as patient's eGFR is 82 (well above the absolute contraindication cutoff of <30 mL/min/1.73m2). Aspirin is safe given no documented history of asthma, nasal polyps, active GI bleeding, or salicylate hypersensitivity."
+      },
+      "clinical_appropriateness": {
+        "status": "PASSED",
+        "details": "The plan directly correlates with the objective findings. While reassuring diagnostics (normal EKG, troponin) prevent an immediate emergency transfer, her metabolic risks and clinical symptoms appropriately validate an urgent outpatient cardiology referral and empiric low-dose aspirin therapy."
+      }
+    },
+    "confidence_scoring": {
+      "subjective_score": 0.95,
+      "objective_score": 0.95,
+      "assessment_score": 0.9,
+      "plan_score": 0.95,
+      "overall_score": 0.935,
+      "scoring_methodology": "Calculated as Overall = (Subjective * 0.20) + (Objective * 0.25) + (Assessment * 0.30) + (Plan * 0.25)"
+    }
+  }
+}

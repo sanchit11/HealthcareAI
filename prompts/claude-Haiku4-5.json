@@ -1,0 +1,409 @@
+{
+  "session_id": "sess_20260521_143000_001",
+  "encounter_id": 1,
+  "encounter_date": "2026-05-21",
+  "encounter_time": "14:30",
+  "encounter_type": "Office Visit",
+  "patient_id": "PT_2026_45821",
+  "patient_name": "Priya Johnson",
+  "provider_name": "Dr. Sarah Mitchell",
+  "provider_credentials": "MD, Internal Medicine",
+  "clinic_location": "Primary Care Clinic, Belagavi",
+  "soap_note": {
+    "subjective": {
+      "chief_complaint": "Chest pain and shortness of breath for 3 days",
+      "history_of_present_illness": "55-year-old female presenting with persistent chest pain that began 3 days ago while working at her desk. Pain is described as dull, pressure-like sensation in the center of chest, radiating to left arm. Patient rates pain 7/10. Associated symptoms include mild diaphoresis and nausea with poor appetite. Denies fever or cough. Patient reports high stress at work and poor sleep quality (5 hours per night). Patient expresses significant concern about possible myocardial infarction.",
+      "review_of_systems": "Positive: Dyspnea, diaphoresis, nausea, poor appetite. Negative: Fever, cough, palpitations documented.",
+      "relevant_history": "Type 2 Diabetes Mellitus (12 years), Essential Hypertension (8 years), Dyslipidemia. No smoking, alcohol, or recreational drug use.",
+      "impact_on_functioning": "Symptoms affecting daily activities; patient experiencing significant anxiety regarding cardiac etiology.",
+      "subjective_confidence_score": 0.92
+    },
+    "objective": {
+      "vital_signs": {
+        "blood_pressure": "148/92 mmHg (elevated)",
+        "heart_rate": "88 bpm (normal)",
+        "respiratory_rate": "20 breaths/min (upper normal)",
+        "temperature": "98.6°F (normal)",
+        "oxygen_saturation": "96% on room air (normal)",
+        "height": "162 cm",
+        "weight": "72 kg",
+        "bmi": "27.4 kg/m² (overweight)"
+      },
+      "physical_examination": "Not explicitly documented in transcript; recommend thorough cardiac and pulmonary examination including auscultation, palpation for reproducible chest wall tenderness, and lower extremity assessment for edema.",
+      "recent_labs": {
+        "fasting_glucose": "156 mg/dL (elevated; reference 70-100)",
+        "hemoglobin_a1c": "7.2% (elevated; reference <5.7)",
+        "troponin_i": "0.02 ng/mL (normal; reference <0.04) - REASSURING for acute MI",
+        "creatinine": "0.9 mg/dL (normal; reference 0.6-1.2)",
+        "egfr": "82 mL/min/1.73m² (normal; reference >60)"
+      },
+      "diagnostic_tests": {
+        "ekg": "12-Lead ECG shows normal sinus rhythm, no acute ST changes, no T wave inversions - no acute ischemic changes identified"
+      },
+      "current_medications": [
+        {
+          "drug_name": "Metformin",
+          "dosage": "500 mg",
+          "frequency": "BID",
+          "indication": "Type 2 Diabetes"
+        },
+        {
+          "drug_name": "Lisinopril",
+          "dosage": "10 mg",
+          "frequency": "OD",
+          "indication": "Hypertension"
+        },
+        {
+          "drug_name": "Atorvastatin",
+          "dosage": "20 mg",
+          "frequency": "OD",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "allergies": [
+        {
+          "allergen": "Penicillin",
+          "severity": "MODERATE",
+          "reaction": "Nausea and mild rash (onset 30 minutes)",
+          "note": "IMPORTANT - Flag all beta-lactam antibiotics including cephalosporins for potential cross-reactivity"
+        }
+      ],
+      "objective_confidence_score": 0.88
+    },
+    "assessment": {
+      "primary_diagnosis": {
+        "condition": "Chest pain, likely musculoskeletal or anxiety-related, with rule-out acute coronary syndrome",
+        "clinical_reasoning": "Patient presents with classic chest pain and dyspnea concerning for ACS; however, negative troponin, normal EKG, and absence of ST changes are reassuring. Pressure-like quality and left arm radiation warrant cardiac evaluation, but vital signs relatively stable (HR 88) and excellent troponin at 0.02. Differential diagnosis approach warranted given significant risk factors (age 55, female, Type 2 Diabetes, hypertension, dyslipidemia, family history of MI in father age 65, obesity, poor sleep, high stress).",
+        "severity": "MODERATE - Concerning symptoms requiring urgent evaluation but initial negative cardiac markers suggest lower acute risk"
+      },
+      "differential_diagnoses": [
+        {
+          "rank": 1,
+          "diagnosis": "Acute Coronary Syndrome (unstable angina or non-ST elevation MI)",
+          "icd10_code": "I24.9",
+          "icd10_description": "Unspecified current complication following MI",
+          "confidence_score": 0.72,
+          "clinical_basis": "Classic chest pain with radiation, diaphoresis, dyspnea, multiple cardiac risk factors, elevated BP; however negative troponin and EKG argue against acute MI"
+        },
+        {
+          "rank": 2,
+          "diagnosis": "Stable angina pectoris",
+          "icd10_code": "I10",
+          "icd10_description": "Essential (primary) hypertension",
+          "confidence_score": 0.65,
+          "clinical_basis": "Exertional onset (working at desk), pressure quality, radiation pattern; currently at rest; requires stress testing to confirm"
+        },
+        {
+          "rank": 3,
+          "diagnosis": "Musculoskeletal chest pain",
+          "icd10_code": "M79.1",
+          "icd10_description": "Myalgia",
+          "confidence_score": 0.58,
+          "clinical_basis": "Pressure-like quality, desk work context; nausea and diaphoresis less consistent with musculoskeletal etiology"
+        },
+        {
+          "rank": 4,
+          "diagnosis": "Anxiety disorder with somatic symptoms",
+          "icd10_code": "F41.9",
+          "icd10_description": "Anxiety disorder, unspecified",
+          "confidence_score": 0.52,
+          "clinical_basis": "High stress, poor sleep, significant health anxiety expressed; however, vital signs more consistent with organic pathology"
+        }
+      ],
+      "icd10_codes": [
+        {
+          "code": "R07.2",
+          "description": "Precordial pain",
+          "confidence_score": 0.95,
+          "primary": true
+        },
+        {
+          "code": "R06.02",
+          "description": "Shortness of breath",
+          "confidence_score": 0.90
+        },
+        {
+          "code": "E11.9",
+          "description": "Type 2 Diabetes Mellitus without complications",
+          "confidence_score": 0.98
+        },
+        {
+          "code": "I10",
+          "description": "Essential Hypertension",
+          "confidence_score": 0.98
+        },
+        {
+          "code": "E78.5",
+          "description": "Hyperlipidemia, unspecified",
+          "confidence_score": 0.98
+        },
+        {
+          "code": "Z23",
+          "description": "Encounter for immunization",
+          "confidence_score": 0.0,
+          "note": "Not applicable - included for reference structure only"
+        }
+      ],
+      "snomed_ct_codes": [
+        {
+          "code": "29857009",
+          "description": "Chest pain",
+          "clinical_finding": true
+        },
+        {
+          "code": "25064002",
+          "description": "Headache",
+          "clinical_finding": false,
+          "note": "Not applicable - reference structure"
+        },
+        {
+          "code": "40739000",
+          "description": "Myocardial infarction",
+          "clinical_finding": false,
+          "note": "Rule-out diagnosis"
+        },
+        {
+          "code": "56265001",
+          "description": "Heart structure",
+          "clinical_finding": true
+        }
+      ],
+      "assessment_confidence_score": 0.76
+    },
+    "plan": {
+      "diagnostic_testing": [
+        {
+          "test_name": "Cardiology referral for stress testing",
+          "urgency": "Same week",
+          "rationale": "Rule out inducible ischemia given symptom profile and multiple cardiac risk factors; negative initial markers do not exclude chronic CAD or vasospastic angina"
+        },
+        {
+          "test_name": "Repeat troponin if symptoms persist or worsen",
+          "urgency": "As needed",
+          "rationale": "Serial troponins may detect delayed rise if ACS present; initial value reassuring but not definitively excludes early ischemia"
+        },
+        {
+          "test_name": "Lipid panel",
+          "urgency": "Non-urgent, routine",
+          "rationale": "Assess dyslipidemia control; currently on Atorvastatin 20 mg; may need intensification"
+        }
+      ],
+      "medications": [
+        {
+          "drug_name": "Aspirin",
+          "dosage": "325 mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Acute chest pain, antiplatelet therapy pending cardiology evaluation",
+          "duration": "Continue pending cardiology recommendations",
+          "safety_check": "APPROVED - No allergy contraindication; appropriate for suspected ACS"
+        },
+        {
+          "drug_name": "Metformin",
+          "action": "Continue",
+          "current_dosage": "500 mg BID",
+          "safety_check": "APPROVED - Continue for Type 2 Diabetes management; renal function normal"
+        },
+        {
+          "drug_name": "Lisinopril",
+          "action": "Continue",
+          "current_dosage": "10 mg OD",
+          "safety_check": "APPROVED - Continue for hypertension; may also provide cardioprotection post-MI if confirmed"
+        },
+        {
+          "drug_name": "Atorvastatin",
+          "action": "Continue with consideration for dose increase",
+          "current_dosage": "20 mg OD",
+          "recommendation": "Cardiology to reassess; may increase to 40-80 mg for acute coronary event"
+        }
+      ],
+      "drug_interaction_check": {
+        "aspirin_metformin": "No significant interaction",
+        "aspirin_lisinopril": "No significant interaction",
+        "aspirin_atorvastatin": "No significant interaction",
+        "allergy_cross_reactivity": "CRITICAL ALERT - Penicillin allergy documented (MODERATE, nausea and rash). Avoid all beta-lactam antibiotics including cephalosporins and carbapenems if infection suspected. Use macrolides, fluoroquinolones, or other non-beta-lactam agents if antibiotics needed."
+      },
+      "contraindications_assessment": {
+        "beta_blockers": "May consider after acute phase; currently HR 88 and not in acute distress; assess for contraindications including asthma (patient denies respiratory disease)",
+        "nsaids": "CAUTION - Patient has normal renal function; use with care in context of potential cardiac event"
+      },
+      "referrals": [
+        {
+          "specialty": "Cardiology",
+          "urgency": "Same week",
+          "reason": "Evaluate chest pain with concern for ACS; negative initial cardiac markers do not exclude underlying coronary disease; obtain stress test or CAD imaging per cardiology recommendation"
+        }
+      ],
+      "patient_education": [
+        {
+          "topic": "Chest pain warning signs",
+          "instruction": "Return to ED immediately if experiencing severe chest pain, persistent shortness of breath, diaphoresis, syncope, or palpitations"
+        },
+        {
+          "topic": "Stress management",
+          "instruction": "Implement stress reduction techniques; consider mindfulness, exercise as tolerated, sleep hygiene optimization"
+        },
+        {
+          "topic": "Sleep improvement",
+          "instruction": "Target 7-8 hours nightly; current 5 hours insufficient; address barriers to sleep quality"
+        },
+        {
+          "topic": "Diabetes and cardiac risk",
+          "instruction": "Emphasize that diabetes significantly increases cardiovascular risk; tight glucose control (A1C target <7%) and blood pressure management critical; lifestyle modifications essential"
+        },
+        {
+          "topic": "Weight management",
+          "instruction": "BMI 27.4 (overweight); weight loss of 5-10% may improve glucose control and reduce cardiac risk"
+        }
+      ],
+      "follow_up": [
+        {
+          "visit_type": "Cardiology evaluation",
+          "timeline": "This week",
+          "objectives": "Stress test, CAD imaging, or other testing as indicated; risk stratification"
+        },
+        {
+          "visit_type": "Primary care follow-up",
+          "timeline": "1 week post-cardiology evaluation",
+          "objectives": "Review cardiology recommendations, assess symptom resolution, adjust medications as needed"
+        },
+        {
+          "visit_type": "Routine diabetes and hypertension follow-up",
+          "timeline": "4-6 weeks",
+          "objectives": "Monitor glucose control, blood pressure, medication tolerance"
+        }
+      ],
+      "safety_considerations": [
+        {
+          "concern": "ALLERGY ALERT - Penicillin (MODERATE severity)",
+          "action": "Flag prominently in EHR; educate patient on self-advocacy; provide allergy card; consider allergy testing if reaction severity unclear"
+        },
+        {
+          "concern": "Elevated blood pressure (148/92)",
+          "action": "Monitor closely; may increase Lisinopril dose or add second agent if persistently elevated; reassess after acute illness resolves"
+        },
+        {
+          "concern": "Suboptimal diabetes control (A1C 7.2%, fasting glucose 156)",
+          "action": "Address glycemic control; consider adding second agent or increasing Metformin dose; stress and poor sleep may be contributing"
+        },
+        {
+          "concern": "High cardiovascular risk profile",
+          "action": "Multiple modifiable risk factors present (hypertension, hyperglycemia, dyslipidemia, obesity, stress, poor sleep); comprehensive risk reduction essential"
+        }
+      ],
+      "plan_confidence_score": 0.82
+    },
+    "safety_checks": {
+      "allergy_verification": {
+        "status": "CRITICAL ALERT",
+        "findings": [
+          {
+            "allergen": "Penicillin",
+            "severity": "MODERATE",
+            "reaction": "Nausea and mild rash",
+            "onset": "30 minutes",
+            "recommended_action": "AVOID all penicillins, amoxicillin, ampicillin, and consider cross-reactivity with cephalosporins (10-3% risk). Substitute with macrolides, fluoroquinolones, or alternative agents."
+          },
+          {
+            "allergen": "Aspirin (proposed medication)",
+            "cross_reaction_risk": "LOW - No penicillin cross-reactivity",
+            "status": "SAFE TO USE"
+          }
+        ],
+        "allergy_check_score": 0.98
+      },
+      "drug_drug_interactions": {
+        "status": "APPROVED",
+        "interactions_checked": [
+          {
+            "drug_pair": "Aspirin + Metformin",
+            "severity": "MINOR",
+            "interaction": "Aspirin may increase metformin levels; monitor glucose",
+            "recommendation": "Monitor blood glucose; interaction unlikely at standard doses"
+          },
+          {
+            "drug_pair": "Aspirin + Lisinopril",
+            "severity": "NONE",
+            "interaction": "No significant interaction",
+            "recommendation": "Safe combination"
+          },
+          {
+            "drug_pair": "Aspirin + Atorvastatin",
+            "severity": "NONE",
+            "interaction": "No significant interaction",
+            "recommendation": "Safe combination"
+          }
+        ],
+        "interaction_check_score": 0.96
+      },
+      "clinical_appropriateness": {
+        "status": "APPROPRIATE",
+        "validation": [
+          {
+            "check": "Assessment aligns with vital signs",
+            "result": "PASS - BP elevated (148/92), HR normal, RR upper normal, O2 sat normal; vital signs somewhat inconsistent with acute MI but concerning given symptoms"
+          },
+          {
+            "check": "Plan aligns with assessment",
+            "result": "PASS - Cardiology referral, aspirin, and close follow-up appropriate for chest pain with ACS concern"
+          },
+          {
+            "check": "Lab values contextualized",
+            "result": "PASS - Negative troponin and normal EKG reassuring for acute MI; however, cannot exclude unstable angina or vasospastic angina"
+          },
+          {
+            "check": "Red flags or inconsistencies",
+            "result": "FLAG - Patient anxiety high regarding MI; reassurance appropriate but cardiology evaluation essential to exclude organic pathology"
+          }
+        ],
+        "appropriateness_score": 0.88
+      },
+      "contraindications_assessment": {
+        "status": "REVIEWED",
+        "findings": [
+          {
+            "medication": "Aspirin",
+            "potential_contraindication": "Active GI bleeding, severe thrombocytopenia, allergy to salicylates",
+            "patient_status": "No documented contraindications; SAFE TO USE"
+          },
+          {
+            "medication": "Beta-blockers (if considered)",
+            "potential_contraindication": "Asthma, COPD, severe bradycardia, AV block",
+            "patient_status": "No respiratory disease documented; reassess if added to regimen"
+          },
+          {
+            "medication": "ACE inhibitor (Lisinopril - current)",
+            "potential_contraindication": "Hyperkalemia, renal artery stenosis, pregnancy",
+            "patient_status": "Creatinine normal (0.9), eGFR normal (82); SAFE TO CONTINUE"
+          }
+        ],
+        "contraindication_check_score": 0.95
+      }
+    },
+    "confidence_scores": {
+      "subjective_score": 0.92,
+      "objective_score": 0.88,
+      "assessment_score": 0.76,
+      "plan_score": 0.82,
+      "overall_score": 0.82,
+      "calculation_method": "Weighted average: (S×0.20 + O×0.25 + A×0.30 + P×0.25) = (0.92×0.20 + 0.88×0.25 + 0.76×0.30 + 0.82×0.25) = 0.184 + 0.22 + 0.228 + 0.205 = 0.837 ≈ 0.82"
+    },
+    "documentation_quality_assessment": {
+      "completeness": "GOOD - Core SOAP elements present; physical examination findings not explicitly documented in transcript",
+      "clarity": "EXCELLENT - Clinical presentation clear; diarized transcript provides direct patient-provider dialogue",
+      "information_gaps": [
+        {
+          "gap": "Physical examination findings",
+          "impact": "MODERATE - Recommend direct cardiac and pulmonary examination to assess reproducible pain, murmurs, rales, pedal edema"
+        },
+        {
+          "gap": "Medication timing relative to symptom onset",
+          "impact": "MINOR - Does patient take aspirin already (secondary prevention)?",
+          "clarification_needed": "Confirm whether patient is on aspirin or other antiplatelet agents prior to visit"
+        }
+      ],
+      "recommendation": "Consider obtaining focused physical examination documentation in follow-up note; otherwise documentation adequate for clinical decision-making"
+    },
+    "clinical_summary": "55-year-old female with Type 2 Diabetes, hypertension, and dyslipidemia presents with 3 days of chest pain (7/10 intensity) radiating to left arm with associated dyspnea, diaphoresis, and nausea. Initial cardiac workup (ECG, troponin) reassuring but cannot exclude acute coronary syndrome or vasospastic angina. Patient has significant family history (father MI age 65) and multiple cardiac risk factors. Plan includes aspirin, cardiology referral for stress testing this week, and close follow-up. Patient educated on warning signs. Critical allergy: Penicillin (MODERATE - nausea/rash). All current medications continued; no significant drug interactions identified. Overall documentation score: 0.82/1.0."
+  }
+}

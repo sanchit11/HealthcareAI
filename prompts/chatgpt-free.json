@@ -1,0 +1,402 @@
+{
+  "status": "success",
+  "action": "generate_soap",
+  "metadata": {
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_time": "14:30",
+    "encounter_type": "Office Visit",
+    "provider_name": "Dr. Sarah Mitchell",
+    "provider_credentials": "MD, Internal Medicine",
+    "clinic_name": "City Health Center",
+    "location": "Primary Care Clinic, Belagavi"
+  },
+  "patient": {
+    "patient_id": "PT_2026_45821",
+    "name": "Priya Johnson",
+    "age": 55,
+    "gender": "Female",
+    "date_of_birth": "1970-11-15"
+  },
+  "soap_note": {
+    "subjective": {
+      "chief_complaint": "Persistent chest pain and shortness of breath for 3 days.",
+      "history_of_present_illness": {
+        "onset": "3 days ago",
+        "location": "Central chest with radiation to left arm",
+        "duration": "Persistent over 3 days",
+        "character": "Dull, pressure-like sensation",
+        "severity": "7/10",
+        "timing": "Started while working at desk",
+        "associated_symptoms": [
+          "Shortness of breath",
+          "Mild diaphoresis",
+          "Nausea",
+          "Reduced appetite"
+        ],
+        "pertinent_negatives": [
+          "Denies fever",
+          "Denies cough",
+          "Denies smoking",
+          "Denies alcohol use",
+          "Denies recreational drug use"
+        ],
+        "patient_concerns": [
+          "Concerned about possible heart attack",
+          "Reports significant work-related stress",
+          "Reports poor sleep quality"
+        ],
+        "impact_on_daily_functioning": "Chest discomfort and anxiety impacting work concentration and sleep."
+      },
+      "past_medical_history": [
+        {
+          "condition": "Type 2 Diabetes Mellitus",
+          "duration_years": 12,
+          "status": "active"
+        },
+        {
+          "condition": "Essential Hypertension",
+          "duration_years": 8,
+          "status": "active"
+        },
+        {
+          "condition": "Dyslipidemia",
+          "status": "active"
+        }
+      ],
+      "family_history": {
+        "mother": [
+          "Hypertension",
+          "Type 2 Diabetes"
+        ],
+        "father": [
+          "Myocardial infarction at age 65"
+        ]
+      },
+      "social_history": {
+        "occupation": "Office Manager",
+        "smoking_status": "Never smoker",
+        "alcohol_use": "None",
+        "recreational_drug_use": "Denied",
+        "stress_level": "High",
+        "sleep_quality": "Poor",
+        "sleep_hours_per_night": 5
+      },
+      "allergies": [
+        {
+          "allergen": "Penicillin",
+          "reaction": "Nausea and mild rash",
+          "severity": "MODERATE"
+        }
+      ],
+      "confidence_score": 0.96
+    },
+    "objective": {
+      "vital_signs": {
+        "blood_pressure": "148/92 mmHg",
+        "heart_rate": "88 bpm",
+        "respiratory_rate": "20 breaths/min",
+        "temperature": "98.6 F",
+        "oxygen_saturation": "96% on room air",
+        "height": "162 cm",
+        "weight": "72 kg",
+        "bmi": 27.4,
+        "bmi_category": "Overweight"
+      },
+      "physical_exam": {
+        "general": "Alert, oriented, mildly anxious appearing female in no acute distress.",
+        "cardiovascular": "Normal rate and rhythm reported on EKG. No acute ischemic changes noted.",
+        "respiratory": "No respiratory distress observed. Oxygen saturation stable on room air.",
+        "neurological": "No focal neurological deficits reported."
+      },
+      "laboratory_results": [
+        {
+          "test": "Fasting Glucose",
+          "value": "156 mg/dL",
+          "reference_range": "70-100 mg/dL",
+          "interpretation": "Elevated"
+        },
+        {
+          "test": "Hemoglobin A1C",
+          "value": "7.2%",
+          "reference_range": "<5.7%",
+          "interpretation": "Elevated, suboptimal diabetic control"
+        },
+        {
+          "test": "Troponin I",
+          "value": "0.02 ng/mL",
+          "reference_range": "<0.04 ng/mL",
+          "interpretation": "Normal"
+        },
+        {
+          "test": "Creatinine",
+          "value": "0.9 mg/dL",
+          "reference_range": "0.6-1.2 mg/dL",
+          "interpretation": "Normal"
+        },
+        {
+          "test": "eGFR",
+          "value": "82 mL/min/1.73m2",
+          "reference_range": ">60 mL/min/1.73m2",
+          "interpretation": "Normal renal function"
+        }
+      ],
+      "diagnostic_tests": [
+        {
+          "test_name": "12-Lead Electrocardiogram",
+          "date": "2026-05-21",
+          "result": "Normal sinus rhythm, no acute ST changes, no T wave inversions",
+          "interpretation": "No acute ischemic changes"
+        }
+      ],
+      "current_medications": [
+        {
+          "medication": "Metformin",
+          "dose": "500 mg",
+          "frequency": "BID",
+          "route": "Oral",
+          "indication": "Type 2 Diabetes Mellitus"
+        },
+        {
+          "medication": "Lisinopril",
+          "dose": "10 mg",
+          "frequency": "OD",
+          "route": "Oral",
+          "indication": "Hypertension"
+        },
+        {
+          "medication": "Atorvastatin",
+          "dose": "20 mg",
+          "frequency": "OD",
+          "route": "Oral",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "objective_summary": "Patient with cardiovascular risk factors including diabetes, hypertension, dyslipidemia, overweight BMI, family history of MI, and stress presenting with chest pain concerning for possible cardiac etiology despite negative initial cardiac biomarkers and normal EKG.",
+      "confidence_score": 0.95
+    },
+    "assessment": {
+      "primary_diagnosis": {
+        "diagnosis": "Chest pain, suspected stable angina versus non-cardiac chest pain",
+        "icd10_code": "R07.89",
+        "icd10_description": "Other chest pain",
+        "snomed_ct_code": "29857009",
+        "snomed_ct_description": "Chest pain",
+        "confidence_score": 0.82,
+        "severity": "Moderate"
+      },
+      "differential_diagnoses": [
+        {
+          "diagnosis": "Stable angina pectoris",
+          "icd10_code": "I20.9",
+          "description": "Angina pectoris, unspecified",
+          "confidence_score": 0.78,
+          "clinical_reasoning": "Presence of exertional pressure-like chest pain radiating to left arm with cardiovascular risk factors despite negative acute ischemic workup."
+        },
+        {
+          "diagnosis": "Acute coronary syndrome, low probability currently",
+          "icd10_code": "I24.9",
+          "description": "Acute ischemic heart disease, unspecified",
+          "confidence_score": 0.55,
+          "clinical_reasoning": "Symptoms concerning for ischemia; however, EKG and troponin are currently normal without evidence of acute infarction."
+        },
+        {
+          "diagnosis": "Anxiety/stress-related chest pain",
+          "icd10_code": "F41.9",
+          "description": "Anxiety disorder, unspecified",
+          "confidence_score": 0.64,
+          "clinical_reasoning": "High occupational stress and poor sleep may contribute to symptom amplification."
+        },
+        {
+          "diagnosis": "Gastroesophageal reflux disease",
+          "icd10_code": "K21.9",
+          "description": "Gastro-esophageal reflux disease without esophagitis",
+          "confidence_score": 0.35,
+          "clinical_reasoning": "Chest discomfort and nausea could be gastrointestinal in origin but presentation is more concerning for cardiac etiology."
+        }
+      ],
+      "chronic_conditions_assessment": [
+        {
+          "condition": "Type 2 Diabetes Mellitus",
+          "assessment": "Suboptimally controlled with A1C 7.2% and fasting glucose elevated.",
+          "icd10_code": "E11.9",
+          "confidence_score": 0.95
+        },
+        {
+          "condition": "Essential Hypertension",
+          "assessment": "Blood pressure elevated during visit.",
+          "icd10_code": "I10",
+          "confidence_score": 0.94
+        },
+        {
+          "condition": "Dyslipidemia",
+          "assessment": "Stable on atorvastatin therapy.",
+          "icd10_code": "E78.5",
+          "confidence_score": 0.91
+        }
+      ],
+      "clinical_reasoning": "Although current EKG and troponin findings do not indicate acute myocardial infarction, the patient's symptom pattern and multiple cardiovascular risk factors warrant further cardiology evaluation to exclude ischemic heart disease. Stress and poor sleep may contribute to symptoms but should not be considered primary causes until cardiac pathology is excluded.",
+      "red_flags": [
+        "Chest pain radiating to left arm",
+        "Associated diaphoresis and nausea",
+        "Multiple cardiovascular risk factors",
+        "Family history of myocardial infarction"
+      ],
+      "information_gaps": [
+        "No stress test or echocardiogram available at this time",
+        "Serial troponins not documented",
+        "Detailed physical examination findings limited"
+      ],
+      "confidence_score": 0.87
+    },
+    "plan": {
+      "diagnostic_plan": [
+        {
+          "test": "Cardiology referral",
+          "urgency": "Within 1 week",
+          "reason": "Further ischemic evaluation due to chest pain and cardiovascular risk factors"
+        },
+        {
+          "test": "Consider stress testing",
+          "reason": "Evaluate for inducible ischemia"
+        },
+        {
+          "test": "Repeat cardiac biomarkers if symptoms worsen",
+          "reason": "Rule out evolving acute coronary syndrome"
+        }
+      ],
+      "medication_plan": [
+        {
+          "medication": "Aspirin",
+          "dose": "81 mg",
+          "frequency": "Once daily",
+          "route": "Oral",
+          "status": "New prescription",
+          "indication": "Cardiovascular risk reduction and chest pain evaluation"
+        },
+        {
+          "medication": "Metformin",
+          "dose": "500 mg BID",
+          "status": "Continue"
+        },
+        {
+          "medication": "Lisinopril",
+          "dose": "10 mg daily",
+          "status": "Continue"
+        },
+        {
+          "medication": "Atorvastatin",
+          "dose": "20 mg daily",
+          "status": "Continue"
+        }
+      ],
+      "lifestyle_and_counseling": [
+        "Advised stress management techniques",
+        "Encouraged improved sleep hygiene",
+        "Counseled on warning signs requiring emergency care including worsening chest pain, severe shortness of breath, syncope, or persistent symptoms",
+        "Encouraged adherence to diabetic and antihypertensive medications",
+        "Discussed cardiovascular risk reduction including diet and exercise"
+      ],
+      "follow_up": {
+        "timeline": "Cardiology within 1 week; primary care follow-up in 2-4 weeks or sooner if symptoms worsen",
+        "return_precautions": [
+          "Go to emergency department immediately for worsening chest pain",
+          "Seek urgent care for increasing shortness of breath",
+          "Seek immediate evaluation for syncope or persistent diaphoresis"
+        ]
+      },
+      "safety_considerations": [
+        "No current evidence of acute myocardial infarction, but cardiac etiology not fully excluded",
+        "Monitor blood pressure and glycemic control closely",
+        "Avoid delaying emergency evaluation if symptoms escalate"
+      ],
+      "confidence_score": 0.91
+    }
+  },
+  "safety_checks": {
+    "allergy_verification": {
+      "status": "PASSED",
+      "allergies_reviewed": [
+        {
+          "allergen": "Penicillin",
+          "severity": "MODERATE",
+          "reaction": "Nausea and mild rash"
+        }
+      ],
+      "cross_reactivity_check": "No penicillin-related medications prescribed.",
+      "allergy_alerts": []
+    },
+    "drug_drug_interactions": {
+      "status": "PASSED",
+      "interactions_identified": [
+        {
+          "medications": [
+            "Aspirin",
+            "Lisinopril"
+          ],
+          "severity": "MILD",
+          "clinical_significance": "Potential reduction in antihypertensive effect with chronic NSAID use; low-dose aspirin generally acceptable.",
+          "recommendation": "Monitor blood pressure."
+        }
+      ]
+    },
+    "contraindications_review": {
+      "status": "PASSED",
+      "findings": [
+        "No contraindication identified for low-dose aspirin.",
+        "Renal function adequate for continued metformin use."
+      ]
+    },
+    "clinical_appropriateness": {
+      "status": "PASSED",
+      "summary": "Assessment and plan are consistent with presenting symptoms, cardiovascular risk profile, normal troponin, and non-ischemic EKG findings."
+    }
+  },
+  "coding_summary": {
+    "primary_icd10": {
+      "code": "R07.89",
+      "description": "Other chest pain"
+    },
+    "secondary_icd10_codes": [
+      {
+        "code": "I20.9",
+        "description": "Angina pectoris, unspecified"
+      },
+      {
+        "code": "E11.9",
+        "description": "Type 2 diabetes mellitus without complications"
+      },
+      {
+        "code": "I10",
+        "description": "Essential hypertension"
+      },
+      {
+        "code": "E78.5",
+        "description": "Hyperlipidemia, unspecified"
+      }
+    ],
+    "snomed_ct": [
+      {
+        "code": "29857009",
+        "description": "Chest pain"
+      },
+      {
+        "code": "44054006",
+        "description": "Diabetes mellitus type 2"
+      },
+      {
+        "code": "38341003",
+        "description": "Hypertensive disorder"
+      }
+    ]
+  },
+  "confidence_scores": {
+    "subjective": 0.96,
+    "objective": 0.95,
+    "assessment": 0.87,
+    "plan": 0.91,
+    "overall": 0.92,
+    "calculation": "(0.96×0.20) + (0.95×0.25) + (0.87×0.30) + (0.91×0.25) = 0.92"
+  }
+}

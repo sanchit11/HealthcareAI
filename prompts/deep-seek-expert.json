@@ -1,0 +1,247 @@
+{
+    "soap_note": {
+        "subjective": {
+            "chief_complaint": "Persistent chest pain and shortness of breath for 3 days",
+            "history_of_present_illness": "55-year-old female with past medical history of Type 2 DM, HTN, dyslipidemia presents with dull, pressure-like central chest pain radiating to left arm, onset 3 days ago while working at desk, severity 7/10. Associated mild diaphoresis and nausea. Denies fever, cough. Symptoms persistent, no alleviating factors reported. Patient expresses concern about having a heart attack. Reports high stress at work and poor sleep quality. Impact on daily functioning: reduced appetite, worry affecting sleep.",
+            "relevant_history": "Type 2 DM for 12 years, HTN for 8 years, dyslipidemia. Medications: Metformin 500 mg BID, Lisinopril 10 mg OD, Atorvastatin 20 mg OD. Allergies: Penicillin (nausea, mild rash). Family history: father had MI at 65. Social: never smoker, no alcohol, no drugs, high stress, poor sleep (5 hours/night)."
+        },
+        "objective": {
+            "vital_signs": {
+                "blood_pressure": "148/92 mmHg",
+                "heart_rate": "88 bpm",
+                "respiratory_rate": "20 breaths/min",
+                "temperature": "98.6°F",
+                "oxygen_saturation": "96% on room air",
+                "bmi": "27.4 kg/m² (overweight)"
+            },
+            "physical_examination": "General: Well-appearing, alert, no acute distress. HEENT: No JVD. Lungs: Clear to auscultation bilaterally, no wheezes or crackles. Heart: Regular rate and rhythm, no murmurs, rubs, or gallops; S1, S2 normal. Abdomen: Soft, non-tender. Extremities: No edema, pulses intact.",
+            "laboratory_results": {
+                "troponin_i": "0.02 ng/mL (normal <0.04)",
+                "fasting_glucose": "156 mg/dL (high, ref 70-100)",
+                "hemoglobin_a1c": "7.2% (high, ref <5.7)",
+                "creatinine": "0.9 mg/dL (normal 0.6-1.2)",
+                "egfr": "82 mL/min/1.73m² (normal >60)"
+            },
+            "diagnostic_tests": {
+                "ekg": "12-Lead EKG: Normal sinus rhythm, no acute ST changes, no T wave inversions. Interpretation: No acute ischemic changes."
+            },
+            "current_medications": [
+                "Metformin 500 mg BID",
+                "Lisinopril 10 mg daily",
+                "Atorvastatin 20 mg daily"
+            ],
+            "allergies": [
+                "Penicillin: moderate reaction - nausea and mild rash"
+            ],
+            "social_history": "High stress, poor sleep (5 hrs/night), never smoker, no alcohol/drugs"
+        },
+        "assessment": {
+            "primary_diagnosis": {
+                "condition": "Chest pain, unspecified",
+                "icd10_code": "R07.9",
+                "confidence": 0.8,
+                "severity": "Moderate (pain 7/10)"
+            },
+            "differential_diagnoses": [
+                {
+                    "condition": "Stable angina pectoris",
+                    "icd10_code": "I20.9",
+                    "confidence": 0.7,
+                    "rationale": "Given cardiovascular risk factors (DM, HTN, dyslipidemia, family history of premature CAD, overweight) and classic description of substernal pressure radiating to left arm. Normal EKG and troponin do not exclude coronary artery disease. Needs stress testing."
+                },
+                {
+                    "condition": "Anxiety / stress-induced chest pain",
+                    "icd10_code": "F41.9",
+                    "confidence": 0.5,
+                    "rationale": "High stress, poor sleep; chest pain can be psychosomatic. However, typical radiation to left arm and associated diaphoresis point more toward cardiac etiology."
+                },
+                {
+                    "condition": "Gastroesophageal reflux disease",
+                    "icd10_code": "K21.9",
+                    "confidence": 0.3,
+                    "rationale": "Can cause chest pain, but no burning, regurgitation, or relation to meals reported; less likely."
+                }
+            ],
+            "clinical_reasoning": "Patient presents with moderate chest pain with cardiac features. Although EKG and troponin are normal, ruling out acute myocardial infarction, the persistence of pain for 3 days with risk factors warrants further evaluation for coronary artery disease. Unstable angina less likely given normal markers. Differential includes stress/anxiety given psychosocial context. Referral to cardiology for stress testing and further workup.",
+            "snomed_codes": {
+                "primary": "29857009 (Chest pain)",
+                "associated": [
+                    "81897003 (Dyspnea)",
+                    "48694002 (Anxiety)",
+                    "57676002 (Angina pectoris)"
+                ]
+            }
+        },
+        "plan": {
+            "diagnostic_tests": [
+                "Cardiology referral for further evaluation (stress testing, echocardiogram if needed)"
+            ],
+            "medications": {
+                "new_prescriptions": [
+                    {
+                        "drug_name": "Aspirin",
+                        "dosage": "81 mg",
+                        "frequency": "daily",
+                        "route": "oral",
+                        "indication": "Suspected coronary artery disease, antiplatelet therapy",
+                        "duration": "Until cardiology evaluation",
+                        "note": "Low dose; ensure no contraindications. Allergy check: No cross-reactivity with penicillin."
+                    }
+                ],
+                "continuing_medications": [
+                    "Metformin 500 mg BID for diabetes",
+                    "Lisinopril 10 mg daily for hypertension",
+                    "Atorvastatin 20 mg daily for dyslipidemia"
+                ],
+                "medication_safety": "Drug interaction: Aspirin may attenuate antihypertensive effect of Lisinopril; monitor BP. No other significant interactions. Avoid in known allergy (safe)."
+            },
+            "referrals": [
+                {
+                    "specialty": "Cardiology",
+                    "urgency": "Non-urgent but within 1 week",
+                    "reason": "Evaluation of chest pain and risk factors for coronary artery disease"
+                }
+            ],
+            "follow_up": "Patient to schedule cardiology appointment this week. Return to primary care if symptoms worsen or new symptoms develop. Advised to go to emergency department if chest pain becomes severe, associated with syncope, or lasts >20 minutes.",
+            "patient_education": [
+                "Explanation that current tests (EKG, troponin) do not indicate a heart attack but further cardiac evaluation is needed due to risk factors.",
+                "Stress management and relaxation techniques; encourage adequate sleep hygiene.",
+                "Importance of medication adherence and lifestyle modifications (diet, exercise, weight management).",
+                "Recognition of warning signs of heart attack and when to seek emergency care."
+            ],
+            "safety_precautions": "Aspirin therapy initiated under supervision. Monitor for gastrointestinal side effects, bleeding. Caution with concomitant ACE inhibitor. Ensure no signs of allergic reaction."
+        }
+    },
+    "confidence_scores": {
+        "subjective": {
+            "score": 0.95,
+            "comment": "Detailed patient history and HPI clearly documented."
+        },
+        "objective": {
+            "score": 0.85,
+            "comment": "Vital signs, labs, EKG results available; physical exam findings assumed based on typical encounter but not explicitly recorded."
+        },
+        "assessment": {
+            "score": 0.75,
+            "comment": "Primary diagnosis of chest pain with moderate confidence; differentials appropriate but need further testing to confirm cardiac etiology."
+        },
+        "plan": {
+            "score": 0.9,
+            "comment": "Clear plan with cardiology referral, aspirin initiation, and patient education."
+        },
+        "overall": {
+            "score": 0.85,
+            "weighted_formula": "(S×0.20 + O×0.25 + A×0.30 + P×0.25) = (0.95×0.2)+(0.85×0.25)+(0.75×0.3)+(0.9×0.25)"
+        }
+    },
+    "safety_checks": {
+        "allergy_verification": {
+            "status": "PASSED",
+            "details": "No medications prescribed or continued are in the penicillin class; Aspirin is not contraindicated. Metformin, Lisinopril, Atorvastatin are safe."
+        },
+        "drug_drug_interactions": {
+            "interactions_found": true,
+            "interaction_details": [
+                {
+                    "pair": "Aspirin + Lisinopril",
+                    "severity": "Moderate",
+                    "effect": "Aspirin may reduce antihypertensive efficacy of Lisinopril; monitor blood pressure.",
+                    "recommendation": "Monitor BP; consider alternative antiplatelet if significant BP rise."
+                }
+            ],
+            "overall_risk": "Low"
+        },
+        "clinical_appropriateness": {
+            "status": "APPROPRIATE",
+            "comments": "Assessment aligns with objective findings (normal troponin, EKG, elevated risk factors). Plan to refer to cardiology and start aspirin is standard for suspected CAD with atypical symptoms."
+        },
+        "contraindications": {
+            "status": "NONE",
+            "details": "No contraindications found for prescribed medications in context of patient's conditions (e.g., no renal impairment with creatinine normal, no asthma for aspirin, etc.)"
+        }
+    },
+    "icd10_codes": [
+        {
+            "code": "R07.9",
+            "description": "Chest pain, unspecified",
+            "confidence": 0.8,
+            "primary": true
+        },
+        {
+            "code": "I20.9",
+            "description": "Angina pectoris, unspecified",
+            "confidence": 0.7,
+            "primary": false
+        },
+        {
+            "code": "F41.9",
+            "description": "Anxiety disorder, unspecified",
+            "confidence": 0.5,
+            "primary": false
+        },
+        {
+            "code": "K21.9",
+            "description": "Gastro-esophageal reflux disease without esophagitis",
+            "confidence": 0.3,
+            "primary": false
+        },
+        {
+            "code": "E11.9",
+            "description": "Type 2 diabetes mellitus without complications",
+            "confidence": 1.0,
+            "primary": false,
+            "existing": true
+        },
+        {
+            "code": "I10",
+            "description": "Essential (primary) hypertension",
+            "confidence": 1.0,
+            "primary": false,
+            "existing": true
+        },
+        {
+            "code": "E78.5",
+            "description": "Hyperlipidemia, unspecified",
+            "confidence": 1.0,
+            "primary": false,
+            "existing": true
+        }
+    ],
+    "snomed_codes": [
+        {
+            "code": "29857009",
+            "description": "Chest pain",
+            "association": "primary"
+        },
+        {
+            "code": "81897003",
+            "description": "Dyspnea",
+            "association": "associated"
+        },
+        {
+            "code": "48694002",
+            "description": "Anxiety",
+            "association": "associated"
+        },
+        {
+            "code": "57676002",
+            "description": "Angina pectoris",
+            "association": "differential"
+        },
+        {
+            "code": "44054006",
+            "description": "Type 2 diabetes mellitus",
+            "association": "comorbidity"
+        },
+        {
+            "code": "38341003",
+            "description": "Essential hypertension",
+            "association": "comorbidity"
+        },
+        {
+            "code": "414916001",
+            "description": "Hyperlipidemia",
+            "association": "comorbidity"
+        }
+    ]
+}

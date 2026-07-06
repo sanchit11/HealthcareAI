@@ -1,0 +1,243 @@
+{
+  "session_details": {
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_time": "14:30",
+    "encounter_type": "Office Visit",
+    "provider": "Dr. Sarah Mitchell, MD, Internal Medicine",
+    "clinic_name": "City Health Center",
+    "location": "Primary Care Clinic, Belagavi"
+  },
+  "patient_demographics": {
+    "patient_id": "PT_2026_45821",
+    "name": "Priya Johnson",
+    "age": 55,
+    "gender": "Female",
+    "date_of_birth": "1970-11-15"
+  },
+  "soap_note": {
+    "subjective": {
+      "chief_complaint": "Chest pain and shortness of breath for 3 days.",
+      "history_of_present_illness": "The patient is a 55-year-old female with a medical history of Type 2 Diabetes Mellitus, Essential Hypertension, and Dyslipidemia, who presents with persistent chest pain and associated shortness of breath for the last 3 days. Onset occurred suddenly while she was performing sedentary desk work. She describes the chest pain as a dull, pressure-like sensation located primarily in the center of her chest, which radiates down her left arm. She rates the initial and current peak severity as a 7 out of 10. Associated features include mild diaphoresis, nausea, and a corresponding decrease in appetite. She explicitly denies having any fever or cough. The patient reports experiencing high levels of workplace stress and chronic poor sleep quality, averaging approximately 5 hours of sleep per night.",
+      "medical_history": "Type 2 Diabetes Mellitus (diagnosed 2014, 12-year history), Essential Hypertension (diagnosed 2018, 8-year history), Dyslipidemia (diagnosed 2019, 7-year history).",
+      "family_history": "Mother has Hypertension and Type 2 Diabetes Mellitus. Father suffered a Myocardial Infarction at 65 years of age.",
+      "social_history": "Employed as an Office Manager. Denies any history of smoking, alcohol intake, or recreational drug use.",
+      "review_of_systems": {
+        "cardiovascular": "Positive for central, pressure-like chest pain radiating to the left arm.",
+        "respiratory": "Positive for shortness of breath. Negative for cough.",
+        "gastrointestinal": "Positive for nausea and decreased appetite. Negative for abdominal pain or vomiting.",
+        "constitutional": "Positive for mild diaphoresis. Negative for fever or chills.",
+        "neurological_psychiatric": "Positive for high occupational stress and poor sleep quality. Negative for lightheadedness or syncope."
+      }
+    },
+    "objective": {
+      "vital_signs": {
+        "blood_pressure": "148/92 mmHg",
+        "heart_rate": "88 bpm",
+        "respiratory_rate": "20 breaths/min",
+        "temperature": "98.6 F (37.0 C)",
+        "oxygen_saturation": "96% on room air"
+      },
+      "anthropometrics": {
+        "height": "162 cm",
+        "weight": "72 kg",
+        "bmi": 27.4,
+        "bmi_category": "Overweight"
+      },
+      "physical_examination_findings": "Patient appears clear-headed and conversational but mildly anxious regarding symptoms. Cardiovascular and pulmonary findings parsed from clinical context are non-contributory for acute failure signs, though blood pressure is elevated. No chest wall tenderness or reproducible chest pain mentioned.",
+      "current_medications": [
+        {
+          "drug_name": "Metformin",
+          "dosage": "500 mg",
+          "frequency": "BID",
+          "route": "oral",
+          "indication": "Type 2 Diabetes Mellitus"
+        },
+        {
+          "drug_name": "Lisinopril",
+          "dosage": "10 mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Essential Hypertension"
+        },
+        {
+          "drug_name": "Atorvastatin",
+          "dosage": "20 mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "allergies": [
+        {
+          "allergen": "Penicillin",
+          "allergen_type": "Antibiotic",
+          "severity": "MODERATE",
+          "reaction": "Nausea and mild rash"
+        }
+      ],
+      "diagnostic_tests": [
+        {
+          "test_name": "12-Lead Electrocardiogram (EKG)",
+          "test_date": "2026-05-21T14:20:00Z",
+          "result": "Normal sinus rhythm, no acute ST segment changes, no T-wave inversions.",
+          "interpretation": "No acute ischemic updates or electrical signs of infarction."
+        }
+      ],
+      "laboratory_results": {
+        "collection_date": "2026-05-21",
+        "panels": [
+          {
+            "test_name": "Troponin I",
+            "value": 0.02,
+            "unit": "ng/mL",
+            "reference_range": "<0.04",
+            "status": "NORMAL"
+          },
+          {
+            "test_name": "Fasting Blood Glucose",
+            "value": 156,
+            "unit": "mg/dL",
+            "reference_range": "70-100",
+            "status": "HIGH"
+          },
+          {
+            "test_name": "Hemoglobin A1c (HbA1c)",
+            "value": 7.2,
+            "unit": "%",
+            "reference_range": "<5.7",
+            "status": "HIGH"
+          },
+          {
+            "test_name": "Serum Creatinine",
+            "value": 0.9,
+            "unit": "mg/dL",
+            "reference_range": "0.6-1.2",
+            "status": "NORMAL"
+          },
+          {
+            "test_name": "eGFR",
+            "value": 82,
+            "unit": "mL/min/1.73m2",
+            "reference_range": ">60",
+            "status": "NORMAL"
+          }
+        ]
+      }
+    },
+    "assessment": {
+      "clinical_impression": "The patient is a 55-year-old female presenting with highly concerning symptoms of anginal equivalent chest pain (dull pressure, 7/10, radiating to the left arm) associated with shortness of breath, diaphoresis, and nausea. Given her high-risk profile (12-year history of Type 2 Diabetes Mellitus, Hypertension, Dyslipidemia, and paternal history of early MI), an acute coronary syndrome (ACS) or coronary artery disease (CAD) etiology must remain at the top of the differential list, despite a currently negative first-set Troponin I and an unrevealing 12-lead EKG. Diabetic patients regularly present with atypical or subtly escalating cardiac symptoms, and a single normal troponin early or mid-course does not rule out unstable angina or evolving ischemia. Her blood pressure is currently suboptimally controlled at 148/92, and her fasting glucose (156 mg/dL) and HbA1c (7.2%) denote mild hyperglycemia, potentially exacerbated by acute physiological stress.",
+      "diagnoses": [
+        {
+          "rank": 1,
+          "condition": "Chest pain, unspecified (Suspected Angina Pectoris / Ischemic Heart Disease rule-out)",
+          "icd10_code": "R07.9",
+          "snomed_ct_code": "29736007",
+          "confidence_score": 0.85,
+          "status": "Differential / Active Workup",
+          "reasoning": "Classic radiating pressure-like pain matching dermatomic cardiac maps in a patient with extensive cardiovascular risk factors, requiring definitive evaluation."
+        },
+        {
+          "rank": 2,
+          "condition": "Shortness of breath",
+          "icd10_code": "R06.02",
+          "snomed_ct_code": "267036007",
+          "confidence_score": 0.95,
+          "status": "Active Symptom",
+          "reasoning": "Directly reported by patient and noted as an associated symptom alongside chest pain, indicating potential cardiovascular or respiratory strain."
+        },
+        {
+          "rank": 3,
+          "condition": "Type 2 diabetes mellitus without complications",
+          "icd10_code": "E11.9",
+          "snomed_ct_code": "44054006",
+          "confidence_score": 0.98,
+          "status": "Pre-existing Active",
+          "reasoning": "Longstanding 12-year history. Current labs indicate suboptimal glycemic control (HbA1c 7.2%, fasting glucose 156 mg/dL)."
+        },
+        {
+          "rank": 4,
+          "condition": "Essential (primary) hypertension",
+          "icd10_code": "I10",
+          "snomed_ct_code": "38341003",
+          "confidence_score": 0.98,
+          "status": "Pre-existing Active",
+          "reasoning": "Chronic 8-year history, currently elevated at 148/92 mmHg during the evaluation."
+        },
+        {
+          "rank": 5,
+          "condition": "Pure hypercholesterolemia / Dyslipidemia",
+          "icd10_code": "E78.00",
+          "snomed_ct_code": "442491000124108",
+          "confidence_score": 0.95,
+          "status": "Pre-existing Active",
+          "reasoning": "Documented historical condition; currently managed with Atorvastatin 20mg daily."
+        }
+      ]
+    },
+    "plan": {
+      "diagnostic_testing": "Urgent outpatient/inpatient cardiology referral for advanced workup including possible repeat biomarkers, echocardiogram, and cardiac stress testing.",
+      "medication_management": [
+        {
+          "action": "NEW_PRESCRIPTION",
+          "drug_name": "Aspirin",
+          "dosage": "81 mg",
+          "frequency": "Once Daily (OD)",
+          "route": "oral",
+          "indication": "Cardioprotection / Antiplatelet therapy for suspected ischemic heart disease",
+          "instructions": "Take daily starting immediately."
+        },
+        {
+          "action": "CONTINUATION",
+          "drug_name": "Metformin",
+          "dosage": "500 mg",
+          "frequency": "BID",
+          "route": "oral",
+          "indication": "Type 2 Diabetes Mellitus"
+        },
+        {
+          "action": "CONTINUATION",
+          "drug_name": "Lisinopril",
+          "dosage": "10 mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Essential Hypertension"
+        },
+        {
+          "action": "CONTINUATION",
+          "drug_name": "Atorvastatin",
+          "dosage": "20 mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "referrals": "Urgent referral to Cardiology. Appointment to be scheduled within 24 to 48 hours given the patient's presentation and high risk profile.",
+      "patient_education": "Educated patient extensively on signs of unstable angina and myocardial infarction. Discussed that while the initial EKG and single troponin are reassuring, they do not entirely exclude cardiac ischemia. Advised on strict stress management techniques and prioritizing sleep hygiene (targeting 7-8 hours). Re-evaluated home compliance with Metformin, Lisinopril, and Atorvastatin.",
+      "safety_precautions": "Instructed patient to seek immediate emergency medical care (call emergency services / go to the nearest emergency department) if her chest pain worsens, changes in character, becomes constant, or is accompanied by worsening shortness of breath, profound diaphoresis, syncope, or lightheadedness.",
+      "follow_up": "To see Cardiology this week. Return to Primary Care Clinic immediately following specialized evaluation or within 1 week for re-evaluation of blood pressure and glycemic trends."
+    },
+    "safety_checks_and_verifications": {
+      "allergy_verification": {
+        "status": "PASSED",
+        "details": "Patient has a documented history of Penicillin allergy (Nausea and mild rash). No beta-lactam or related antibiotics were prescribed or recommended in this plan. No latex allergy noted."
+      },
+      "drug_drug_interactions": {
+        "status": "PASSED",
+        "details": "Concurrently administered Lisinopril and Atorvastatin combined with low-dose Aspirin (81mg) show no major contraindications or severe therapeutic duplication issues. Renal function is normal (Creatinine 0.9, eGFR 82), validating safety of continuing current oral therapies."
+      },
+      "clinical_appropriateness_check": {
+        "status": "PASSED",
+        "details": "The addition of antiplatelet therapy (Aspirin) and a priority Cardiology referral directly correlates with the high-risk presentation of suspected ischemic chest pain, despite normal baseline screening diagnostics."
+      }
+    },
+    "documentation_confidence_scores": {
+      "subjective_score": 0.95,
+      "objective_score": 0.98,
+      "assessment_score": 0.92,
+      "plan_score": 0.95,
+      "overall_weighted_score": 0.948
+    }
+  }
+}

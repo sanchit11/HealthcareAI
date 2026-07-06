@@ -1,0 +1,356 @@
+{
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_type": "Office Visit",
+    "patient_token": "[PATIENT_1]",
+    "provider_token": "[PROVIDER_1]",
+    "soap_note": {
+        "subjective": {
+            "chief_complaint": "Chest pain and shortness of breath for 3 days.",
+            "history_of_present_illness": "55-year-old female with 3-day history of persistent central chest pain described as dull and pressure-like, radiating to the left arm, onset while working at desk. Pain severity reported as 7/10. Associated symptoms include shortness of breath, mild diaphoresis, nausea, and decreased appetite. Patient expresses concern about possible heart attack. Denies fever, cough, smoking, alcohol use, and recreational drug use. Reports high work-related stress and poor sleep quality.",
+            "review_of_systems": {
+                "constitutional": [
+                    "Decreased appetite",
+                    "Denies fever"
+                ],
+                "cardiovascular": [
+                    "Chest pain radiating to left arm",
+                    "Mild diaphoresis"
+                ],
+                "respiratory": [
+                    "Shortness of breath",
+                    "Denies cough"
+                ],
+                "gastrointestinal": [
+                    "Nausea"
+                ],
+                "psychiatric": [
+                    "Stress at work",
+                    "Poor sleep quality",
+                    "Anxiety regarding cardiac condition"
+                ]
+            },
+            "past_medical_history": [
+                {
+                    "condition": "Type 2 Diabetes Mellitus",
+                    "icd10": "E11.9"
+                },
+                {
+                    "condition": "Essential Hypertension",
+                    "icd10": "I10"
+                },
+                {
+                    "condition": "Dyslipidemia",
+                    "icd10": "E78.5"
+                }
+            ],
+            "medications": [
+                {
+                    "drug": "Metformin",
+                    "dosage": "500 mg",
+                    "frequency": "BID",
+                    "route": "oral"
+                },
+                {
+                    "drug": "Lisinopril",
+                    "dosage": "10 mg",
+                    "frequency": "daily",
+                    "route": "oral"
+                },
+                {
+                    "drug": "Atorvastatin",
+                    "dosage": "20 mg",
+                    "frequency": "daily",
+                    "route": "oral"
+                }
+            ],
+            "allergies": [
+                {
+                    "allergen": "Penicillin",
+                    "reaction": "Nausea and mild rash",
+                    "severity": "moderate"
+                }
+            ],
+            "social_history": {
+                "smoking_status": "Never smoker",
+                "alcohol_use": "None",
+                "recreational_drugs": "Denies",
+                "occupation": "Office Manager",
+                "stress_level": "High",
+                "sleep_quality": "Poor",
+                "sleep_hours_per_night": 5
+            },
+            "family_history": [
+                {
+                    "relation": "Mother",
+                    "conditions": [
+                        "Hypertension",
+                        "Type 2 Diabetes"
+                    ]
+                },
+                {
+                    "relation": "Father",
+                    "conditions": [
+                        "Myocardial Infarction at age 65"
+                    ]
+                }
+            ]
+        },
+        "objective": {
+            "vitals": {
+                "blood_pressure": "148/92",
+                "heart_rate": 88,
+                "respiratory_rate": 20,
+                "temperature_f": "98.6",
+                "oxygen_saturation": "96% on room air",
+                "BMI": 27.4,
+                "BMI_status": "Overweight"
+            },
+            "physical_exam": [],
+            "diagnostic_results": [
+                {
+                    "test": "12-Lead Electrocardiogram",
+                    "result": "Normal sinus rhythm, no acute ST changes, no T wave inversions",
+                    "interpretation": "No acute ischemic changes",
+                    "loinc": "11524-6"
+                },
+                {
+                    "test": "Troponin I",
+                    "result": "0.02 ng/mL",
+                    "reference_range": "<0.04",
+                    "interpretation": "Normal",
+                    "loinc": "10839-9"
+                },
+                {
+                    "test": "Fasting Glucose",
+                    "result": "156 mg/dL",
+                    "reference_range": "70-100",
+                    "interpretation": "High",
+                    "loinc": "2339-0"
+                },
+                {
+                    "test": "HbA1c",
+                    "result": "7.2%",
+                    "reference_range": "<5.7",
+                    "interpretation": "High",
+                    "loinc": "4548-4"
+                },
+                {
+                    "test": "Creatinine",
+                    "result": "0.9 mg/dL",
+                    "reference_range": "0.6-1.2",
+                    "interpretation": "Normal",
+                    "loinc": "2160-0"
+                },
+                {
+                    "test": "eGFR",
+                    "result": "82 mL/min/1.73m2",
+                    "reference_range": ">60",
+                    "interpretation": "Normal",
+                    "loinc": "33914-3"
+                }
+            ],
+            "snomed_findings": [
+                {
+                    "finding": "Chest pain",
+                    "snomed_ct": "29857009"
+                },
+                {
+                    "finding": "Shortness of breath",
+                    "snomed_ct": "267036007"
+                },
+                {
+                    "finding": "Nausea",
+                    "snomed_ct": "422587007"
+                },
+                {
+                    "finding": "Diaphoresis",
+                    "snomed_ct": "415690000"
+                },
+                {
+                    "finding": "Normal sinus rhythm",
+                    "snomed_ct": "251150006"
+                }
+            ]
+        },
+        "assessment": [
+            {
+                "problem": "Chest pain with radiation to left arm, concerning for possible angina versus non-acute coronary syndrome chest pain",
+                "icd10": "R07.9",
+                "snomed_ct": "29857009",
+                "status": "Active",
+                "supporting_evidence": [
+                    {
+                        "type": "transcript_quote",
+                        "evidence": "It feels like someone is pressing on my chest, and it goes to my left arm. The pain is pretty bad, maybe a 7 out of 10."
+                    },
+                    {
+                        "type": "transcript_quote",
+                        "evidence": "Yes, I've been sweating a little and feeling nauseous."
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "intake_form.chief_complaint = 'Chest pain and shortness of breath x 3 days'"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "diagnostic_tests.result = 'Normal sinus rhythm, no acute ST changes, no T wave inversions'"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "labs_recent.Troponin I = 0.02 ng/mL (normal)"
+                    }
+                ],
+                "clinical_impression": "Symptoms concerning for cardiac etiology; acute myocardial infarction less likely given normal EKG and troponin, but cardiology evaluation warranted due to risk factors."
+            },
+            {
+                "problem": "Shortness of breath",
+                "icd10": "R06.02",
+                "snomed_ct": "267036007",
+                "status": "Active",
+                "supporting_evidence": [
+                    {
+                        "type": "transcript_quote",
+                        "evidence": "Have you experienced any shortness of breath, sweating, or nausea with the pain?"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "intake_form.patient_reported_symptoms includes 'shortness of breath'"
+                    }
+                ],
+                "clinical_impression": "Associated symptom occurring with chest pain episode."
+            },
+            {
+                "problem": "Type 2 Diabetes Mellitus",
+                "icd10": "E11.9",
+                "snomed_ct": "44054006",
+                "status": "Chronic active",
+                "supporting_evidence": [
+                    {
+                        "type": "patient_context",
+                        "evidence": "problem_list includes Type 2 Diabetes Mellitus"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "labs_recent.HbA1c = 7.2%"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "active_medications includes Metformin 500 mg BID"
+                    }
+                ],
+                "clinical_impression": "Suboptimal glycemic control with elevated fasting glucose and HbA1c."
+            },
+            {
+                "problem": "Essential Hypertension",
+                "icd10": "I10",
+                "snomed_ct": "59621000",
+                "status": "Chronic active",
+                "supporting_evidence": [
+                    {
+                        "type": "patient_context",
+                        "evidence": "problem_list includes Essential Hypertension"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "vitals_current.bp_display = 148/92"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "active_medications includes Lisinopril 10 mg daily"
+                    }
+                ],
+                "clinical_impression": "Elevated blood pressure during current visit."
+            },
+            {
+                "problem": "Dyslipidemia",
+                "icd10": "E78.5",
+                "snomed_ct": "370992007",
+                "status": "Chronic active",
+                "supporting_evidence": [
+                    {
+                        "type": "patient_context",
+                        "evidence": "problem_list includes Dyslipidemia"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "active_medications includes Atorvastatin 20 mg daily"
+                    }
+                ],
+                "clinical_impression": "Chronic condition under ongoing treatment."
+            },
+            {
+                "problem": "Psychosocial stress and poor sleep",
+                "icd10": "Z73.3",
+                "snomed_ct": "73595000",
+                "status": "Active",
+                "supporting_evidence": [
+                    {
+                        "type": "transcript_quote",
+                        "evidence": "I'm really worried this might be my heart."
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "social_history.stress_level = high"
+                    },
+                    {
+                        "type": "patient_context",
+                        "evidence": "social_history.sleep_quality = poor"
+                    }
+                ],
+                "clinical_impression": "Work-related stress and poor sleep may be contributing to symptoms."
+            }
+        ],
+        "plan": {
+            "diagnostics": [],
+            "medications": [
+                {
+                    "action": "Start",
+                    "medication": "Aspirin",
+                    "details": "Prescribed by provider during visit; dose not specified in transcript."
+                }
+            ],
+            "referrals": [
+                {
+                    "specialty": "Cardiology",
+                    "urgency": "This week",
+                    "reason": "Further evaluation of chest pain and cardiac risk factors"
+                }
+            ],
+            "patient_education": [
+                {
+                    "topic": "Stress management",
+                    "details": "Provider advised patient to manage stress."
+                },
+                {
+                    "topic": "Sleep/rest",
+                    "details": "Provider advised patient to get adequate rest."
+                }
+            ],
+            "follow_up": [
+                {
+                    "instruction": "Cardiology follow-up this week for further evaluation."
+                }
+            ],
+            "safety_checks": [
+                {
+                    "issue": "Possible cardiac chest pain symptoms present",
+                    "status": "Addressed",
+                    "details": "Normal EKG and troponin reviewed; cardiology referral initiated."
+                },
+                {
+                    "issue": "Penicillin allergy",
+                    "status": "Documented",
+                    "details": "Reaction includes nausea and mild rash."
+                }
+            ]
+        },
+        "confidence_scores": {
+            "subjective": 0.98,
+            "objective": 0.99,
+            "assessment": 0.94,
+            "plan": 0.92
+        }
+    }
+}

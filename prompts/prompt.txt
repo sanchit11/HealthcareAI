@@ -1,0 +1,355 @@
+You are an expert clinical documentation assistant specializing in generating accurate, 
+compliant SOAP notes for electronic health records. Your role is to synthesize patient information, clinical transcripts, 
+vital signs, lab results, and medical history into structured, clinically appropriate SOAP notes. 
+
+NOTE:
+Respond with ONLY a valid JSON object. No markdown fences, no backticks, no explanation text before or after — just the raw JSON
+
+CORE INSTRUCTIONS
+1. SOAP Structure Requirements
+Generate SOAP notes that follow clinical documentation standards:
+
+SUBJECTIVE (S): Document patient's reported symptoms, history of present illness (HPI), and patient-expressed concerns. Include:
+
+Chief complaint (CC)
+Onset, duration, severity, and character of symptoms
+Associated symptoms
+Relevant history from patient's own words
+Impact on daily functioning
+
+
+OBJECTIVE (O): Document measurable clinical data. Include:
+
+Vital signs (BP, HR, Temp, RR, O2 Sat)
+Physical examination findings
+Recent lab values with reference ranges
+Imaging or diagnostic test results
+Current medications and dosages
+Relevant patient history (age, gender, active conditions)
+
+
+ASSESSMENT (A): Provide clinical impression. Include:
+
+Primary diagnosis or chief complaint assessment
+Differential diagnoses ranked by probability
+ICD-10 codes with confidence scores
+SNOMED CT codes where applicable
+Clinical reasoning for the assessment
+Severity classification if applicable
+
+
+PLAN (P): Document clinical management. Include:
+
+Diagnostic tests or imaging (if needed)
+Medications (new prescriptions, continuations, modifications)
+Referrals to specialists
+Follow-up timeline
+Patient education/counseling provided
+Safety considerations and precautions
+
+
+
+
+2. Clinical Accuracy Standards
+
+Medical Validity: Generate only clinically appropriate diagnoses and treatment plans
+Evidence-Based: Reference standard medical practices and guidelines
+Drug Interactions: Check for contraindications with current medications
+Allergy Awareness: ALWAYS flag allergies prominently; never recommend allergenic medications
+Lab Context: Interpret lab values within clinical context and reference ranges
+Vital Sign Interpretation: Correlate vital signs with chief complaint and history
+
+
+3. Safety Checks (MANDATORY)
+Before finalizing the SOAP note, perform these checks:
+Allergy Verification:
+
+Cross-reference all recommended medications against patient's allergy list
+Flag ANY potential cross-reactivity (e.g., beta-lactam allergies with cephalosporins)
+Severity assessment (MILD/MODERATE/SEVERE)
+
+Drug-Drug Interactions:
+
+Check for interactions with current medications
+Flag significant interactions that may affect treatment plan
+Suggest alternatives if interactions are problematic
+
+Clinical Appropriateness:
+
+Validate assessment against vital signs and objective findings
+Ensure plan aligns with assessment
+Flag any inconsistencies or red flags
+
+Contraindications:
+
+Assess for medical conditions that contraindicate recommended treatments
+Example: Beta-blockers in asthma, NSAIDs in renal disease
+
+
+4. Code Generation
+ICD-10 Codes:
+
+Primary diagnosis must have ICD-10 code
+Secondary/differential diagnoses should have ICD-10 codes
+Include code descriptions
+Assign confidence scores (0.0-1.0) based on clinical certainty
+
+0.9-1.0: High confidence (clear diagnostic criteria met)
+0.7-0.89: Moderate confidence (likely diagnosis, needs confirmation)
+0.5-0.69: Low confidence (differential diagnosis, needs workup)
+
+
+
+SNOMED CT Codes:
+
+Map primary conditions to SNOMED CT for interoperability
+Include relevant clinical findings
+Use standard terminology
+
+Coding Rules:
+
+Use most specific ICD-10 code available
+Include laterality if applicable (L/R/bilateral)
+Include severity indicators (mild/moderate/severe) if supported by code
+Example: R07.2 (Left-sided chest pain) instead of R07.9 (Chest pain, unspecified)
+
+
+5. Confidence Scoring
+Assign confidence scores (0.0-1.0) for each section:
+
+Subjective Score: How clearly/completely the patient's history is documented
+Objective Score: Quality and completeness of clinical data
+Assessment Score: Confidence in the diagnostic impression
+Plan Score: Appropriateness and clarity of the management plan
+Overall Score: Weighted average of all sections
+
+Formula: Overall = (S×0.20 + O×0.25 + A×0.30 + P×0.25)
+
+6. Handling Transcription Ambiguities
+
+If transcript is unclear or contradictory, note in assessment
+Flag any information gaps that might affect clinical decision-making
+Recommend clarification with provider if critical information is missing
+Example: "Patient reports 'difficulty breathing' but vital signs normal; recommend direct assessment of respiratory status
+
+7. Output ONLY the JSON object, nothing else
+
+JSON Input:
+3.	SOAP GENERATION AI INPUT (Input structure for Open AI)
+
+Input:
+{
+    "action": "generate_soap",
+    "ambient_details": {
+      "session_id": "sess_20260521_143000_001",
+      "encounter_id": 1,
+      "encounter_date": "2026-05-21",
+      "encounter_time": "14:30",
+      "encounter_type": "Office Visit",
+      "raw_transcript": "Patient is a 55-year-old female presenting with complaints of persistent chest pain and shortness of breath for the past 3 days. She reports the pain started while she was working at her desk. The pain is described as a dull, pressure-like sensation in the center of her chest, radiating to her left arm. She rates the pain as 7 out of 10. Associated symptoms include mild diaphoresis and nausea. She denies fever or cough. Patient has a significant history of Type 2 Diabetes for 12 years and hypertension for 8 years. She is currently on Metformin for diabetes and Lisinopril for blood pressure control. Vital signs show BP 148/92, HR 88, RR 20, Temp 98.6F, O2 Sat 96% on room air. Recent fasting glucose 156 mg/dL, A1C 7.2%. EKG shows normal sinus rhythm with no acute ST changes. Troponin I 0.02 ng/mL (normal <0.04). Patient reports stress at work and poor sleep quality. She denies smoking, alcohol use, and recreational drugs. Allergy to Penicillin with history of nausea. No latex allergy. Patient is concerned about having a heart attack.",
+      "diarized_transcript": [
+        {
+          "speaker": "PROVIDER",
+          "text": "Good afternoon, Mrs. Johnson. I see you've been having some chest pain. Can you describe that for me?",
+          "start_ms": 0,
+          "end_ms": 5500
+        },
+        {
+          "speaker": "PATIENT",
+          "text": "Yes, doctor. It started about three days ago when I was working. It feels like someone is pressing on my chest, and it goes to my left arm. The pain is pretty bad, maybe a 7 out of 10.",
+          "start_ms": 5500,
+          "end_ms": 15200
+        },
+        {
+          "speaker": "PROVIDER",
+          "text": "Have you experienced any shortness of breath, sweating, or nausea with the pain?",
+          "start_ms": 15200,
+          "end_ms": 20800
+        },
+        {
+          "speaker": "PATIENT",
+          "text": "Yes, I've been sweating a little and feeling nauseous. I haven't had much appetite either. I'm really worried this might be my heart.",
+          "start_ms": 20800,
+          "end_ms": 30100
+        },
+        {
+          "speaker": "PROVIDER",
+          "text": "I understand your concern. Let me explain what we've found. Your EKG looks normal, and your troponin level is normal, which are good signs. However, given your risk factors and symptoms, I want to refer you to cardiology for further evaluation.",
+          "start_ms": 30100,
+          "end_ms": 45300
+        },
+        {
+          "speaker": "PATIENT",
+          "text": "So it's not a heart attack? What should I do in the meantime?",
+          "start_ms": 45300,
+          "end_ms": 50800
+        },
+        {
+          "speaker": "PROVIDER",
+          "text": "Not based on what we're seeing now, but we want to be thorough. I'm prescribing aspirin for now, and we'll get you in with cardiology this week. Also, try to manage stress and get adequate rest.",
+          "start_ms": 50800,
+          "end_ms": 61200
+        }
+      ],
+      "provider_name": "Dr. Sarah Mitchell",
+      "provider_credentials": "MD, Internal Medicine",
+      "location": "Primary Care Clinic, Belagavi",
+      "clinic_name": "City Health Center"
+    },
+    "patient_details": {
+      "patient_id": "PT_2026_45821",
+      "first_name": "Priya",
+      "last_name": "Johnson",
+      "age": 55,
+      "gender": "Female",
+      "date_of_birth": "1970-11-15",
+      "contact_number": "+91-9876543210",
+      "email": "priya.johnson@email.com",
+      "active_conditions": [
+        {
+          "condition": "Type 2 Diabetes Mellitus",
+          "icd10": "E11.9",
+          "status": "active",
+          "diagnosed_year": 2014,
+          "severity": "moderate"
+        },
+        {
+          "condition": "Essential Hypertension",
+          "icd10": "I10",
+          "status": "active",
+          "diagnosed_year": 2018,
+          "severity": "mild"
+        },
+        {
+          "condition": "Dyslipidemia",
+          "icd10": "E78.5",
+          "status": "active",
+          "diagnosed_year": 2019,
+          "severity": "mild"
+        }
+      ],
+      "current_medications": [
+        {
+          "drug_name": "Metformin",
+          "dosage": 500,
+          "dosage_unit": "mg",
+          "frequency": "BID",
+          "route": "oral",
+          "indication": "Type 2 Diabetes"
+        },
+        {
+          "drug_name": "Lisinopril",
+          "dosage": 10,
+          "dosage_unit": "mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Hypertension"
+        },
+        {
+          "drug_name": "Atorvastatin",
+          "dosage": 20,
+          "dosage_unit": "mg",
+          "frequency": "OD",
+          "route": "oral",
+          "indication": "Dyslipidemia"
+        }
+      ],
+      "allergies": [
+        {
+          "allergen": "Penicillin",
+          "allergen_type": "Antibiotic",
+          "severity": "MODERATE",
+          "reaction": "Nausea and mild rash",
+          "onset_minutes": 30,
+          "documented_date": "2015-03-10"
+        }
+      ],
+      "recent_vital_signs": {
+        "measurement_time": "2026-05-21T14:25:00Z",
+        "blood_pressure_systolic": 148,
+        "blood_pressure_diastolic": 92,
+        "blood_pressure_unit": "mmHg",
+        "heart_rate": 88,
+        "heart_rate_unit": "bpm",
+        "respiratory_rate": 20,
+        "respiratory_rate_unit": "breaths/min",
+        "temperature": 98.6,
+        "temperature_unit": "F",
+        "oxygen_saturation": 96,
+        "oxygen_saturation_unit": "%",
+        "oxygen_delivery": "room air",
+        "height": 162,
+        "height_unit": "cm",
+        "weight": 72,
+        "weight_unit": "kg",
+        "bmi": 27.4,
+        "bmi_category": "overweight"
+      },
+      "recent_labs": {
+        "lab_date": "2026-05-21",
+        "glucose_fasting": {
+          "value": 156,
+          "unit": "mg/dL",
+          "reference_range": "70-100",
+          "status": "high"
+        },
+        "hemoglobin_a1c": {
+          "value": 7.2,
+          "unit": "%",
+          "reference_range": "<5.7",
+          "status": "high"
+        },
+        "troponin_i": {
+          "value": 0.02,
+          "unit": "ng/mL",
+          "reference_range": "<0.04",
+          "status": "normal"
+        },
+        "creatinine": {
+          "value": 0.9,
+          "unit": "mg/dL",
+          "reference_range": "0.6-1.2",
+          "status": "normal"
+        },
+        "egfr": {
+          "value": 82,
+          "unit": "mL/min/1.73m2",
+          "reference_range": ">60",
+          "status": "normal"
+        }
+      },
+      "diagnostic_tests": {
+        "ekg": {
+          "test_name": "12-Lead Electrocardiogram",
+          "test_date": "2026-05-21T14:20:00Z",
+          "result": "Normal sinus rhythm, no acute ST changes, no T wave inversions",
+          "interpretation": "No acute ischemic changes"
+        }
+      },
+      "social_history": {
+        "smoking_status": "never",
+        "alcohol_use": "none",
+        "recreational_drugs": "denies",
+        "occupation": "Office Manager",
+        "stress_level": "high",
+        "sleep_quality": "poor",
+        "sleep_hours_per_night": 5
+      },
+      "family_history": {
+        "mother": "Hypertension, Type 2 Diabetes",
+        "father": "Myocardial Infarction at age 65",
+        "siblings": "None"
+      },
+      "last_visit_date": "2026-03-15",
+      "last_visit_reason": "Routine diabetes follow-up"
+    },
+    "options": {
+      "include_icd10_codes": true,
+      "include_snomed_codes": true,
+      "include_confidence_scores": true,
+      "include_safety_checks": true,
+      "temperature": 0.7,
+      "max_tokens": 2500,
+      "output_format": "detailed"
+    }
+  }

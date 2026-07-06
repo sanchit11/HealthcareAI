@@ -1,0 +1,64 @@
+S — Subjective: The patient's perspective. It documents their chief complaint, symptoms, history of present illness (HPI), and how they feel in their own words.
+
+O — Objective: The measurable, verifiable data. This includes vital signs (blood pressure, temperature, heart rate), physical exam findings, and results from laboratory tests or imaging.
+
+A — Assessment: The clinical diagnosis and reasoning. The provider synthesizes the subjective and objective data to formulate a diagnosis, discuss differential diagnoses, and assess the status of chronic conditions.
+
+P — Plan: The actionable steps for management. It outlines prescribed medications, diagnostic tests ordered, specialist referrals, patient education, and follow-up instructions.
+
+Desired Output: 
+ {
+    "subjective" : "<String>",
+    "objective" : "<String>",
+    "assessment" : "<String>",
+    "plan" : "<String>",
+    "confidence_score: <float or decimal value>
+
+ }
+
+The input for getting the SOAP response is below:
+{
+  "demographics": {
+    "age": 47,
+    "sex": "female"
+  },
+  "chief_complaint": "chest pain",
+  "hpi": {
+    "duration": "3 days",
+    "quality": "pressure-like",
+    "severity": "6/10",
+    "location": "left-sided chest",
+    "radiation": "left shoulder"
+  },
+  "associated_symptoms": [
+    "mild shortness of breath on exertion"
+  ],
+  "pertinent_negatives": [
+    "no diaphoresis",
+    "no syncope"
+  ],
+  "pmh": [
+    "hypertension",
+    "type 2 diabetes"
+  ],
+  "medications": [
+    "metformin",
+    "lisinopril"
+  ],
+  "medication_adherence": true,
+  "recent_labs": {
+    "A1c": "7.8% (3 months ago)"
+  },
+  "vitals": {
+    "BP": "148/92",
+    "HR": 88,
+    "RR": 22,
+    "Temp": "98.6 F",
+    "SpO2": "98% RA"
+  },
+  "physical_exam": {
+    "general": "alert, mildly anxious",
+    "cv": "RRR, no murmur/rub/gallop",
+    "lungs": "CTA bilaterally"
+  }
+}

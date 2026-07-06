@@ -1,0 +1,117 @@
+You are Synapta's clinical documentation assistant. Your role is to
+structure a de-identified physician-patient conversation transcript
+into a SOAP note for clinician review.
+
+RULES (NEVER violate):
+1. Use only information present in the transcript or the structured
+   patient_context. Never invent vitals, lab values, medications, or
+   diagnoses.
+2. Tokens like [PATIENT_1], [PROVIDER_1], [DOB_1] are PHI placeholders
+   — pass them through unchanged.
+3. For every Assessment item, cite the supporting evidence by quoting
+   the relevant transcript line OR referencing the specific
+   patient_context field (e.g., labs_recent.HbA1c).
+4. Map diagnoses to ICD-10 codes and findings to SNOMED CT codes.
+   If you are not 95%+ confident in a code, omit it and flag for
+   clinician entry.
+5. Output a confidence score (0.0–1.0) per SOAP section. Any section
+   below 0.85 will be highlighted for clinician attention.
+6. Use clinical shorthand standard in US primary care (e.g., "T2DM",
+   "HTN", "BMI"). Spell out anything ambiguous.
+7. Do NOT make recommendations the clinician did not voice. The Plan
+   section reflects what the clinician decided, not what you think.
+
+OUTPUT FORMAT: valid JSON only, matching the provided schema.
+No prose, no markdown, no commentary outside the JSON.
+
+Structure the following visit into a SOAP note.
+
+
+Input : 
+
+PATIENT_CONTEXT:
+{
+  "patient_token": "[PATIENT_1]",
+  "demographics": {
+    "age": 58,
+    "sex": "F",
+    "preferred_language": "en"
+  },
+  "problem_list": [
+    { "code": "E11.9", "display": "Type 2 diabetes mellitus", "onset": "2019-03" },
+    { "code": "I10",   "display": "Essential hypertension",   "onset": "2020-07" },
+    { "code": "E78.5", "display": "Hyperlipidemia",           "onset": "2021-11" }
+  ],
+  "active_medications": [
+    { "rxnorm": "860975", "name": "metformin 1000 mg tablet",  "sig": "BID",   "started": "2019-04" },
+    { "rxnorm": "314076", "name": "lisinopril 10 mg tablet",   "sig": "daily", "started": "2020-08" },
+    { "rxnorm": "617312", "name": "atorvastatin 40 mg tablet", "sig": "daily", "started": "2021-11" }
+  ],
+  "allergies": [
+    { "substance": "sulfa drugs", "reaction": "rash", "severity": "moderate" }
+  ],
+  "vitals_current": {
+    "bp": "138/84",
+    "hr": 76,
+    "wt_lb": 178,
+    "ht_in": 64,
+    "bmi": 30.5,
+    "temp_f": 98.4,
+    "spo2": 98,
+    "captured": "2026-05-19T10:14:00Z"
+  },
+  "labs_recent": [
+    {
+      "loinc": "4548-4",
+      "test": "HbA1c",
+      "value": 8.1,
+      "unit": "%",
+      "date": "2026-05-02",
+      "prior": [
+        { "value": 7.2, "date": "2025-11-08" },
+        { "value": 7.0, "date": "2025-05-12" },
+        { "value": 6.8, "date": "2024-11-10" }
+      ]
+    },
+    {
+      "loinc": "9318-7",
+      "test": "UACR",
+      "value": 89,
+      "unit": "mg/g",
+      "date": "2026-05-02",
+      "prior": [
+        { "value": 24, "date": "2025-11-08" }
+      ]
+    },
+    { "loinc": "13457-7", "test": "LDL",  "value": 118, "unit": "mg/dL",           "date": "2026-05-02" },
+    { "loinc": "33914-3", "test": "eGFR", "value": 78,  "unit": "mL/min/1.73m^2",  "date": "2026-05-02" }
+  ],
+  "intake_form": {
+    "chief_complaint": "DM f/u, BP elevated at home",
+    "patient_reported_symptoms": [],
+    "screening": { "phq2_score": 1, "audit_c_score": 0 }
+  },
+  "cds_alerts": [
+    {
+      "source": "FirstDatabank",
+      "trigger": "empagliflozin 10mg — new order",
+      "verdict": "PASS",
+      "ddi_checks": [
+        { "with": "metformin 1000mg",  "severity": "none" },
+        { "with": "lisinopril 10mg",   "severity": "none" },
+        { "with": "atorvastatin 40mg", "severity": "none" }
+      ],
+      "allergy_checks": [
+        { "allergen": "sulfa drugs", "cross_reactive": false }
+      ],
+      "dose_range_check": { "patient_egfr": 78, "approved_range": "eGFR >= 30", "status": "within_range" },
+      "fdb_version": "2026.04"
+    }
+  ],
+  "last_3_encounters": [
+    { "date": "2025-11-10", "type": "DM f/u",       "provider": "[PROVIDER_1]", "assessment": "T2DM, controlled; HTN, stable; continue current regimen" },
+    { "date": "2025-05-15", "type": "Annual Wellness","provider": "[PROVIDER_1]", "assessment": "Stable chronic conditions; due UACR" },
+    { "date": "2024-11-10", "type": "DM f/u",        "provider": "[PROVIDER_1]", "assessment": "T2DM, controlled" }
+  ]
+}
+

@@ -1,0 +1,110 @@
+{
+  "soap_note": {
+    "subjective": {
+      "chief_complaint": "Persistent chest pain and shortness of breath for 3 days",
+      "history_of_present_illness": "55-year-old female with chest pain starting 3 days ago while at work. Describes as dull, pressure-like sensation in central chest radiating to left arm, severity 7/10. Associated symptoms include mild diaphoresis and nausea. Denies fever, cough, or vomiting. Symptoms have impacted work and sleep. Patient expresses significant concern for heart attack. Reports high work stress and poor sleep (5 hours/night).",
+      "review_of_systems": "Positive for diaphoresis, nausea, dyspnea on exertion. Negative for fever, cough, palpitations (per transcript).",
+      "past_medical_history": "Type 2 Diabetes Mellitus (12 years), Essential Hypertension (8 years), Dyslipidemia (7 years).",
+      "social_history": "Never smoker, no alcohol, no recreational drugs. Office manager with high stress.",
+      "family_history": "Mother: Hypertension and Type 2 DM. Father: Myocardial infarction at age 65.",
+      "medications": "Metformin 500mg BID, Lisinopril 10mg daily, Atorvastatin 20mg daily.",
+      "allergies": "Penicillin (moderate - nausea and mild rash)",
+      "confidence_score": 0.95
+    },
+    "objective": {
+      "vital_signs": {
+        "bp": "148/92 mmHg",
+        "hr": "88 bpm",
+        "rr": "20 breaths/min",
+        "temp": "98.6 F",
+        "o2_sat": "96% on room air",
+        "bmi": "27.4 (overweight)"
+      },
+      "physical_exam": "General: Alert, oriented, in mild distress due to pain. No acute respiratory distress noted.",
+      "diagnostic_tests": {
+        "ekg": "Normal sinus rhythm, no acute ST changes",
+        "troponin_i": "0.02 ng/mL (normal <0.04)",
+        "fasting_glucose": "156 mg/dL (high)",
+        "hba1c": "7.2% (high)",
+        "creatinine": "0.9 mg/dL (normal)",
+        "egfr": "82 mL/min/1.73m² (normal)"
+      },
+      "confidence_score": 0.92
+    },
+    "assessment": {
+      "primary_diagnosis": {
+        "description": "Chest pain, likely anginal equivalent given risk factors",
+        "icd10": "I20.9",
+        "icd10_description": "Angina pectoris, unspecified",
+        "snomed_ct": "194828000",
+        "severity": "Moderate",
+        "confidence": 0.75
+      },
+      "secondary_conditions": [
+        {
+          "description": "Type 2 diabetes mellitus without complications",
+          "icd10": "E11.9",
+          "snomed_ct": "44054006",
+          "confidence": 1.0
+        },
+        {
+          "description": "Essential (primary) hypertension",
+          "icd10": "I10",
+          "snomed_ct": "59621000",
+          "confidence": 1.0
+        }
+      ],
+      "differential_diagnoses": [
+        {
+          "description": "Acute coronary syndrome (ruled out by normal EKG/troponin but requires further eval)",
+          "icd10": "I24.9",
+          "confidence": 0.65
+        },
+        {
+          "description": "Musculoskeletal chest pain",
+          "icd10": "M79.1",
+          "confidence": 0.4
+        },
+        {
+          "description": "Anxiety/stress-related",
+          "icd10": "F41.9",
+          "confidence": 0.35
+        }
+      ],
+      "clinical_reasoning": "Patient has multiple cardiac risk factors (age, DM, HTN, dyslipidemia, family history) with classic anginal symptoms. Normal initial EKG and troponin reassuring against acute MI but insufficient to rule out unstable angina. Elevated BP and glucose indicate suboptimal control of chronic conditions.",
+      "confidence_score": 0.78
+    },
+    "plan": {
+      "diagnostic_plan": "Urgent referral to Cardiology for further evaluation (stress test or coronary imaging as per specialist). Consider repeat troponin in 3-6 hours if symptoms persist.",
+      "therapeutic_plan": {
+        "medications": [
+          {
+            "drug": "Aspirin 81mg",
+            "dosage": "81 mg daily",
+            "rationale": "Antiplatelet therapy for suspected ischemic symptoms",
+            "status": "New"
+          }
+        ],
+        "continuations": "Continue Metformin, Lisinopril, Atorvastatin. Optimize glycemic and BP control."
+      },
+      "referrals": "Cardiology referral within 1 week.",
+      "patient_education": "Counseled on symptoms of heart attack, when to seek emergency care. Advised stress management, improved sleep hygiene, heart-healthy diet, and regular exercise as tolerated. Reviewed medication adherence.",
+      "follow_up": "Follow-up in primary care in 1 week or sooner if symptoms worsen. Return to ED for worsening pain, SOB, or diaphoresis.",
+      "safety_checks": {
+        "allergies_verified": true,
+        "drug_interactions": "No significant interactions noted with current regimen. Aspirin appropriate (non-penicillin).",
+        "contraindications": "None identified. Renal function adequate.",
+        "red_flags": "Cardiac risk factors warrant prompt specialist evaluation."
+      },
+      "confidence_score": 0.85
+    }
+  },
+  "metadata": {
+    "patient_id": "PT_2026_45821",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "provider": "Dr. Sarah Mitchell, MD",
+    "overall_confidence": 0.87,
+    "safety_cleared": true
+  }
+}

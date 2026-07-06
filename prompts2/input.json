@@ -1,0 +1,266 @@
+{
+  "action": "generate_soap",
+  "ambient_details": {
+    "session_id": "sess_abc123def456",
+    "encounter_id": 5847291,
+    "encounter_date": "2026-05-28",
+    "encounter_time": "14:30",
+    "encounter_type": "office_visit",
+    "duration_seconds": 1200,
+    "status": "completed",
+    "provider_token": "prov_Dr_Sarah_Johnson",
+    "provider_credentials": "MD, Family Medicine",
+    "clinic_name": "Belagavi Medical Center",
+    "location": "Belagavi, Karnataka",
+    "raw_transcript": "Patient presents with complaints of persistent cough for the past week. Reports occasional shortness of breath with exertion. Denies fever but notes mild fatigue. Has been taking over-the-counter cough syrup without relief.",
+    "diarized_transcript": [
+      {
+        "speaker": "Provider",
+        "text": "Good afternoon. I see you're here today with a cough. Can you tell me when this started?",
+        "start_ms": 0,
+        "end_ms": 5000
+      },
+      {
+        "speaker": "Patient",
+        "text": "Yeah, about a week ago. It started after I was exposed to someone with a cold at work.",
+        "start_ms": 5000,
+        "end_ms": 12000
+      },
+      {
+        "speaker": "Provider",
+        "text": "Have you experienced any fever or body aches?",
+        "start_ms": 12000,
+        "end_ms": 17000
+      },
+      {
+        "speaker": "Patient",
+        "text": "No fever that I noticed. Just some fatigue and the cough is really annoying.",
+        "start_ms": 17000,
+        "end_ms": 23000
+      }
+    ]
+  },
+  "patient_context": {
+    "patient_token": "pat_john_doe_12345",
+    "_source_table": "patients",
+    "demographics": {
+      "age": 42,
+      "sex": "M",
+      "preferred_language": "English",
+      "occupation": "Software Engineer"
+    },
+    "problem_list": [
+      {
+        "icd10": "I10",
+        "display": "Essential (primary) hypertension",
+        "onset_year": 2019,
+        "severity": "mild",
+        "status": "active",
+        "_source_table": "problems",
+        "_source_type": "chronic"
+      },
+      {
+        "icd10": "E11.9",
+        "display": "Type 2 diabetes mellitus without complications",
+        "onset_year": 2021,
+        "severity": "moderate",
+        "status": "active",
+        "_source_table": "problems",
+        "_source_type": "chronic"
+      }
+    ],
+    "active_medications": [
+      {
+        "rxnorm": "RX05643",
+        "drug_name": "Lisinopril",
+        "dosage": "10 mg",
+        "frequency": "once daily",
+        "route": "oral",
+        "indication": "Hypertension",
+        "start_date": "2019-03-15",
+        "active": true,
+        "_source_table": "medications"
+      },
+      {
+        "rxnorm": "RX02355",
+        "drug_name": "Metformin",
+        "dosage": "500 mg",
+        "frequency": "twice daily",
+        "route": "oral",
+        "indication": "Type 2 diabetes",
+        "start_date": "2021-06-20",
+        "active": true,
+        "_source_table": "medications"
+      },
+      {
+        "rxnorm": "RX09854",
+        "drug_name": "Atorvastatin",
+        "dosage": "20 mg",
+        "frequency": "once daily at bedtime",
+        "route": "oral",
+        "indication": "Hyperlipidemia",
+        "start_date": "2022-01-10",
+        "active": true,
+        "_source_table": "medications"
+      }
+    ],
+    "allergies": [
+      {
+        "allergen": "Penicillin",
+        "allergen_type": "medication",
+        "reaction": "rash, urticaria",
+        "severity": "moderate",
+        "onset_minutes": 240,
+        "documented_date": "2015-08-22",
+        "_source_table": "allergies",
+        "_source_type": "documented"
+      },
+      {
+        "allergen": "Shellfish",
+        "allergen_type": "food",
+        "reaction": "oral itching, throat swelling",
+        "severity": "moderate",
+        "onset_minutes": 15,
+        "documented_date": "2018-05-10",
+        "_source_table": "allergies",
+        "_source_type": "documented"
+      }
+    ],
+    "vitals_current": {
+      "bps": "138",
+      "bpd": "86",
+      "bp_display": "138/86 mmHg",
+      "pulse": 78,
+      "respiration": 18,
+      "temperature": 36.8,
+      "temp_method": "oral",
+      "oxygen_saturation": 97,
+      "oxygen_delivery": "room air",
+      "height": 175,
+      "height_unit": "cm",
+      "weight": 88,
+      "weight_unit": "kg",
+      "BMI": 28.7,
+      "BMI_status": "overweight",
+      "captured": "2026-05-28T14:25:00Z",
+      "_source_table": "vitals"
+    },
+    "labs_recent": [
+      {
+        "loinc": "2345-7",
+        "test": "Glucose, serum",
+        "value": 145.0,
+        "unit": "mg/dL",
+        "reference_range": "70-100 mg/dL",
+        "abnormal": "H",
+        "date": "2026-04-15",
+        "prior": [
+          {
+            "value": 138.0,
+            "date": "2026-03-20"
+          },
+          {
+            "value": 142.0,
+            "date": "2026-02-10"
+          }
+        ],
+        "_source_table": "lab_results"
+      },
+      {
+        "loinc": "1975-2",
+        "test": "Total Cholesterol",
+        "value": 215.0,
+        "unit": "mg/dL",
+        "reference_range": "<200 mg/dL",
+        "abnormal": "H",
+        "date": "2026-04-15",
+        "prior": null,
+        "_source_table": "lab_results"
+      },
+      {
+        "loinc": "2885-2",
+        "test": "Creatinine, serum",
+        "value": 0.95,
+        "unit": "mg/dL",
+        "reference_range": "0.7-1.3 mg/dL",
+        "abnormal": "N",
+        "date": "2026-04-15",
+        "prior": null,
+        "_source_table": "lab_results"
+      }
+    ],
+    "diagnostic_tests": [
+      {
+        "test_name": "Chest X-ray",
+        "loinc": "71020",
+        "test_date": "2026-05-28",
+        "result": "clear bilateral lung fields, no acute infiltrates",
+        "interpretation": "No acute cardiopulmonary process",
+        "_source_table": "diagnostic_tests"
+      }
+    ],
+    "social_history": {
+      "smoking_status": "never",
+      "alcohol_use": "occasional",
+      "recreational_drugs": "denies",
+      "occupation": "Software Engineer",
+      "stress_level": "moderate",
+      "sleep_quality": "fair",
+      "sleep_hours_per_night": 6,
+      "_source_table": "social_history"
+    },
+    "family_history": [
+      {
+        "relation": "father",
+        "conditions": [
+          "myocardial infarction",
+          "type 2 diabetes"
+        ]
+      },
+      {
+        "relation": "mother",
+        "conditions": [
+          "hypertension",
+          "osteoarthritis"
+        ]
+      }
+    ],
+    "intake_form": {
+      "chief_complaint": "Persistent cough for 1 week",
+      "patient_reported_symptoms": [
+        "Dry cough",
+        "Mild dyspnea on exertion",
+        "Fatigue",
+        "Throat irritation"
+      ],
+      "pain_scale": null,
+      "screening": {
+        "depression_screening": "PHQ-9 score 4 (minimal)",
+        "anxiety_screening": "GAD-7 score 3 (minimal)",
+        "fall_risk": "low"
+      }
+    },
+    "cds_alerts": [
+      {
+        "alert_id": "cds_001",
+        "category": "drug_interaction",
+        "severity": "low",
+        "message": "Monitor for hyperglycemia with statin use"
+      }
+    ],
+    "last_visit": {
+      "date": "2026-04-10",
+      "reason": "Routine follow-up for hypertension and diabetes",
+      "provider": "Dr. Sarah Johnson"
+    }
+  },
+  "options": {
+    "include_icd10_codes": true,
+    "include_snomed_codes": false,
+    "include_confidence_scores": true,
+    "include_safety_checks": true,
+    "temperature": 0.7,
+    "max_tokens": 1500,
+    "output_format": "structured"
+  }
+}

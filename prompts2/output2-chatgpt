@@ -1,0 +1,7 @@
+{
+  "subjective": "47-year-old female presents with 3-day history of pressure-like left-sided chest pain radiating to the left shoulder, rated 6/10. Reports mild shortness of breath with exertion, especially when walking upstairs. Denies diaphoresis and syncope. Past medical history significant for hypertension and type 2 diabetes mellitus. Reports daily adherence to metformin and lisinopril.",
+  "objective": "Vital signs: BP 148/92 mmHg, HR 88 bpm, RR 22/min, Temp 98.6 F, SpO2 98% on room air. General: Alert, mildly anxious. Cardiovascular: Regular rate and rhythm, no murmurs, rubs, or gallops. Respiratory: Lungs clear to auscultation bilaterally. EKG: Normal sinus rhythm without acute ST changes. Troponin I: 0.02 ng/mL (normal <0.04). Recent A1c 7.8% from 3 months ago.",
+  "assessment": "1. Chest pain with left shoulder radiation and exertional dyspnea; acute coronary syndrome less likely given normal EKG and negative troponin, though patient has cardiovascular risk factors including hypertension and type 2 diabetes mellitus. 2. Hypertension. 3. Type 2 diabetes mellitus with suboptimal glycemic control.",
+  "plan": "Recommend cardiology referral for further cardiac evaluation. Continue metformin and lisinopril as prescribed. Initiate aspirin therapy. Educated patient regarding warning signs requiring urgent evaluation, including worsening chest pain, syncope, or increased shortness of breath. Follow up with cardiology this week.",
+  "confidence_score": 0.98
+}

@@ -1,0 +1,160 @@
+You are an enterprise-grade clinical documentation AI integrated into an EHR.
+
+Generate a medically accurate SOAP note using the inputs below.
+
+Documentation Rules:
+- Use concise professional physician documentation
+- Preserve clinically meaningful details
+- Include:
+  - HPI
+  - ROS-relevant symptoms
+  - pertinent negatives
+  - objective findings
+  - prioritized differential/assessment
+  - evidence-based plan
+- Assessment should reflect medical decision-making
+- Avoid redundancy
+- Never fabricate findings
+- If information is uncertain, omit it
+
+Output Format:
+ {
+    "subjective" : "<String>",
+    "objective" : "<String>",
+    "assessment" : "<String>",
+    "plan" : "<String>",
+    "confidence_score: <float or decimal value>
+
+ }
+ Below is the input for the patient.
+{
+  "action": "generate_soap",
+
+  "ambient_details": {
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_time": "14:30",
+    "encounter_type": "Office Visit",
+    "duration_seconds": 40,
+    "status": "complete",
+    "provider_token": "[PROVIDER_1]",
+    "provider_credentials": "MD, Internal Medicine",
+    "clinic_name": "City Health Center",
+    "location": "Primary Care Clinic, Belagavi",
+    "transcript": {
+      "raw_transcript": "Doctor: What brings you in today? Patient: I've had chest pressure for about 3 days. Patient: It's on the left side and sometimes goes into my shoulder. Patient: About 6 out of 10. Patient: I get short of breath walking upstairs. Patient: No sweating or passing out. Doctor: Still taking metformin and lisinopril? Patient: Yes daily. Doctor: History of hypertension and diabetes noted.",
+      "diarized_transcript": [
+        {
+          "speaker": "Doctor",
+          "text": "What brings you in today?",
+          "start_ms": 0,
+          "end_ms": 3000
+        },
+        {
+          "speaker": "Patient",
+          "text": "I've had chest pressure for about 3 days.",
+          "start_ms": 3000,
+          "end_ms": 8000
+        },
+        {
+          "speaker": "Patient",
+          "text": "It's on the left side and sometimes goes into my shoulder.",
+          "start_ms": 8000,
+          "end_ms": 14000
+        },
+        {
+          "speaker": "Patient",
+          "text": "About 6 out of 10.",
+          "start_ms": 14000,
+          "end_ms": 17000
+        },
+        {
+          "speaker": "Patient",
+          "text": "I get short of breath walking upstairs.",
+          "start_ms": 17000,
+          "end_ms": 22000
+        },
+        {
+          "speaker": "Patient",
+          "text": "No sweating or passing out.",
+          "start_ms": 22000,
+          "end_ms": 27000
+        },
+        {
+          "speaker": "Doctor",
+          "text": "Still taking metformin and lisinopril?",
+          "start_ms": 27000,
+          "end_ms": 32000
+        },
+        {
+          "speaker": "Patient",
+          "text": "Yes daily.",
+          "start_ms": 32000,
+          "end_ms": 35000
+        },
+        {
+          "speaker": "Doctor",
+          "text": "History of hypertension and diabetes noted.",
+          "start_ms": 35000,
+          "end_ms": 40000
+        }
+      ]
+    }
+  },
+
+  "patient_context": {
+    "demographics": {
+      "age": 47,
+      "sex": "female"
+    },
+    "chief_complaint": "chest pain",
+    "problem_list": [
+      "hypertension",
+      "type 2 diabetes",
+      "chest pain",
+      "shortness of breath on exertion"
+    ],
+    "medications": [
+      {
+        "name": "metformin",
+        "adherence": true,
+        "frequency": "daily"
+      },
+      {
+        "name": "lisinopril",
+        "adherence": true,
+        "frequency": "daily"
+      }
+    ],
+    "allergies": [
+      {
+        "allergen": "Penicillin",
+        "reaction": "nausea"
+      },
+      {
+        "allergen": "Latex",
+        "reaction": "none"
+      }
+    ],
+    "vitals": {
+      "BP": "148/92",
+      "HR": 88,
+      "RR": 22,
+      "Temp": "98.6 F",
+      "SpO2": "98% RA"
+    },
+    "physical_exam": {
+      "general": "alert, mildly anxious",
+      "cv": "RRR, no murmur/rub/gallop",
+      "lungs": "CTA bilaterally"
+    },
+    "labs": {
+      "A1c": "7.8% (3 months ago)",
+      "Troponin I": "0.02 ng/mL (normal <0.04)"
+    },
+    "prior_summary": {
+      "summary_text": "Patient is a 47-year-old female with a history of Type 2 Diabetes and hypertension managed on Metformin and Lisinopril. She presented with a 3-day history of pressure-like left-sided chest pain radiating to her left shoulder, rated 6/10, with associated exertional dyspnea. She denies diaphoresis or syncope. Last A1c was 7.8% three months ago. Initial workup revealed an EKG with normal sinus rhythm and non-diagnostic troponins (0.02 ng/mL). Due to her cardiovascular risk profile, she is being referred to outpatient cardiology for urgent evaluation. Instructed to continue home medication regimen daily."
+    }
+  }
+}

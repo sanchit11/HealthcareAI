@@ -1,0 +1,290 @@
+{
+  "action": "generate_soap",
+
+  "ambient_details": {
+    "session_id": "sess_20260521_143000_001",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "encounter_time": "14:30",
+    "encounter_type": "Office Visit",
+    "duration_seconds": 420,
+    "status": "complete",
+    "provider_token": "[PROVIDER_1]",
+    "provider_credentials": "MD, Internal Medicine",
+    "clinic_name": "City Health Center",
+    "location": "Primary Care Clinic, Belagavi",
+
+    "raw_transcript": "Patient is a 55-year-old female presenting with complaints of persistent chest pain and shortness of breath for the past 3 days. She reports the pain started while she was working at her desk. The pain is described as a dull, pressure-like sensation in the center of her chest, radiating to her left arm. She rates the pain as 7 out of 10. Associated symptoms include mild diaphoresis and nausea. She denies fever or cough. Patient has a significant history of Type 2 Diabetes for 12 years and hypertension for 8 years. She is currently on Metformin for diabetes and Lisinopril for blood pressure control. Vital signs show BP 148/92, HR 88, RR 20, Temp 98.6F, O2 Sat 96% on room air. Recent fasting glucose 156 mg/dL, A1C 7.2%. EKG shows normal sinus rhythm with no acute ST changes. Troponin I 0.02 ng/mL (normal <0.04). Patient reports stress at work and poor sleep quality. She denies smoking, alcohol use, and recreational drugs. Allergy to Penicillin with history of nausea. No latex allergy. Patient is concerned about having a heart attack.",
+
+    "diarized_transcript": [
+      {
+        "speaker": "PROVIDER",
+        "text": "Good afternoon, [PATIENT_1]. I see you've been having some chest pain. Can you describe that for me?",
+        "start_ms": 0,
+        "end_ms": 5500
+      },
+      {
+        "speaker": "PATIENT",
+        "text": "Yes, doctor. It started about three days ago when I was working. It feels like someone is pressing on my chest, and it goes to my left arm. The pain is pretty bad, maybe a 7 out of 10.",
+        "start_ms": 5500,
+        "end_ms": 15200
+      },
+      {
+        "speaker": "PROVIDER",
+        "text": "Have you experienced any shortness of breath, sweating, or nausea with the pain?",
+        "start_ms": 15200,
+        "end_ms": 20800
+      },
+      {
+        "speaker": "PATIENT",
+        "text": "Yes, I've been sweating a little and feeling nauseous. I haven't had much appetite either. I'm really worried this might be my heart.",
+        "start_ms": 20800,
+        "end_ms": 30100
+      },
+      {
+        "speaker": "PROVIDER",
+        "text": "I understand your concern. Let me explain what we've found. Your EKG looks normal, and your troponin level is normal, which are good signs. However, given your risk factors and symptoms, I want to refer you to cardiology for further evaluation.",
+        "start_ms": 30100,
+        "end_ms": 45300
+      },
+      {
+        "speaker": "PATIENT",
+        "text": "So it's not a heart attack? What should I do in the meantime?",
+        "start_ms": 45300,
+        "end_ms": 50800
+      },
+      {
+        "speaker": "PROVIDER",
+        "text": "Not based on what we're seeing now, but we want to be thorough. I'm prescribing aspirin for now, and we'll get you in with cardiology this week. Also, try to manage stress and get adequate rest.",
+        "start_ms": 50800,
+        "end_ms": 61200
+      }
+    ]
+  },
+
+  "patient_context": {
+    "patient_token": "[PATIENT_1]",
+    "_source_table": "patient_data",
+
+    "demographics": {
+      "age": 55,
+      "sex": "F",
+      "preferred_language": "en",
+      "occupation": "Office Manager"
+    },
+
+    "problem_list": [
+      {
+        "icd10": "E11.9",
+        "display": "Type 2 Diabetes Mellitus",
+        "onset_year": 2014,
+        "severity": "moderate",
+        "status": "active",
+        "_source_table": "lists",
+        "_source_type": "medical_problem"
+      },
+      {
+        "icd10": "I10",
+        "display": "Essential Hypertension",
+        "onset_year": 2018,
+        "severity": "mild",
+        "status": "active",
+        "_source_table": "lists",
+        "_source_type": "medical_problem"
+      },
+      {
+        "icd10": "E78.5",
+        "display": "Dyslipidemia",
+        "onset_year": 2019,
+        "severity": "mild",
+        "status": "active",
+        "_source_table": "lists",
+        "_source_type": "medical_problem"
+      }
+    ],
+
+    "active_medications": [
+      {
+        "rxnorm": "860975",
+        "drug_name": "Metformin",
+        "dosage": "500 mg",
+        "frequency": "BID",
+        "route": "oral",
+        "indication": "Type 2 Diabetes",
+        "start_date": "2014-01-01",
+        "active": true,
+        "_source_table": "prescriptions"
+      },
+      {
+        "rxnorm": "314076",
+        "drug_name": "Lisinopril",
+        "dosage": "10 mg",
+        "frequency": "daily",
+        "route": "oral",
+        "indication": "Hypertension",
+        "start_date": "2018-01-01",
+        "active": true,
+        "_source_table": "prescriptions"
+      },
+      {
+        "rxnorm": "617312",
+        "drug_name": "Atorvastatin",
+        "dosage": "20 mg",
+        "frequency": "daily",
+        "route": "oral",
+        "indication": "Dyslipidemia",
+        "start_date": "2019-01-01",
+        "active": true,
+        "_source_table": "prescriptions"
+      }
+    ],
+
+    "allergies": [
+      {
+        "allergen": "Penicillin",
+        "allergen_type": "Antibiotic",
+        "reaction": "Nausea and mild rash",
+        "severity": "moderate",
+        "onset_minutes": 30,
+        "documented_date": "2015-03-10",
+        "_source_table": "lists",
+        "_source_type": "allergy"
+      }
+    ],
+
+    "vitals_current": {
+      "bps": "148",
+      "bpd": "92",
+      "bp_display": "148/92",
+      "pulse": 88,
+      "respiration": 20,
+      "temperature": 98.6,
+      "temp_method": "Oral",
+      "oxygen_saturation": 96,
+      "oxygen_delivery": "room air",
+      "height": 162,
+      "height_unit": "cm",
+      "weight": 72,
+      "weight_unit": "kg",
+      "BMI": 27.4,
+      "BMI_status": "Overweight",
+      "captured": "2026-05-21T14:25:00Z",
+      "_source_table": "form_vitals"
+    },
+
+    "labs_recent": [
+      {
+        "loinc": "2339-0",
+        "test": "Glucose (fasting)",
+        "value": 156,
+        "unit": "mg/dL",
+        "reference_range": "70-100",
+        "abnormal": "high",
+        "date": "2026-05-21",
+        "prior": [
+          { "value": 142, "date": "2026-03-15" },
+          { "value": 138, "date": "2025-12-10" }
+        ],
+        "_source_table": "procedure_result"
+      },
+      {
+        "loinc": "4548-4",
+        "test": "HbA1c",
+        "value": 7.2,
+        "unit": "%",
+        "reference_range": "<5.7",
+        "abnormal": "high",
+        "date": "2026-05-21",
+        "prior": [
+          { "value": 7.5, "date": "2026-03-15" },
+          { "value": 7.8, "date": "2025-12-10" }
+        ],
+        "_source_table": "procedure_result"
+      },
+      {
+        "loinc": "10839-9",
+        "test": "Troponin I",
+        "value": 0.02,
+        "unit": "ng/mL",
+        "reference_range": "<0.04",
+        "abnormal": "normal",
+        "date": "2026-05-21",
+        "_source_table": "procedure_result"
+      },
+      {
+        "loinc": "2160-0",
+        "test": "Creatinine",
+        "value": 0.9,
+        "unit": "mg/dL",
+        "reference_range": "0.6-1.2",
+        "abnormal": "normal",
+        "date": "2026-05-21",
+        "_source_table": "procedure_result"
+      },
+      {
+        "loinc": "33914-3",
+        "test": "eGFR",
+        "value": 82,
+        "unit": "mL/min/1.73m2",
+        "reference_range": ">60",
+        "abnormal": "normal",
+        "date": "2026-05-21",
+        "_source_table": "procedure_result"
+      }
+    ],
+
+    "diagnostic_tests": [
+      {
+        "test_name": "12-Lead Electrocardiogram",
+        "loinc": "11524-6",
+        "test_date": "2026-05-21T14:20:00Z",
+        "result": "Normal sinus rhythm, no acute ST changes, no T wave inversions",
+        "interpretation": "No acute ischemic changes",
+        "_source_table": "procedure_result"
+      }
+    ],
+
+    "social_history": {
+      "smoking_status": "never",
+      "alcohol_use": "none",
+      "recreational_drugs": "denies",
+      "occupation": "Office Manager",
+      "stress_level": "high",
+      "sleep_quality": "poor",
+      "sleep_hours_per_night": 5,
+      "_source_table": "history_data"
+    },
+
+    "family_history": [
+      { "relation": "mother",  "conditions": ["Hypertension", "Type 2 Diabetes"] },
+      { "relation": "father",  "conditions": ["Myocardial Infarction at age 65"] },
+      { "relation": "siblings","conditions": [] }
+    ],
+
+    "intake_form": {
+      "chief_complaint": "Chest pain and shortness of breath x 3 days",
+      "patient_reported_symptoms": ["chest pain", "shortness of breath", "diaphoresis", "nausea", "decreased appetite"],
+      "pain_scale": 7,
+      "screening": {
+        "phq2_score": null,
+        "audit_c_score": null
+      }
+    },
+
+    "cds_alerts": [],
+
+    "last_visit": {
+      "date": "2026-03-15",
+      "reason": "Routine diabetes follow-up",
+      "provider": "[PROVIDER_1]"
+    }
+  },
+
+  "options": {
+    "include_icd10_codes": true,
+    "include_snomed_codes": true,
+    "include_confidence_scores": true,
+    "include_safety_checks": true,
+    "output_format": "detailed"
+  }
+}

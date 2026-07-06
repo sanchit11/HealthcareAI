@@ -1,0 +1,492 @@
+{
+    "patient_token": "[PATIENT_1]",
+    "encounter_id": 1,
+    "encounter_date": "2026-05-21",
+    "chief_complaint": "Chest pain and shortness of breath x 3 days",
+    "template_prefills": {
+        "annual_wellness": {
+            "template_name": "Annual Wellness",
+            "hpi": {
+                "summary": "[REVIEW] 55-year-old female with active history of T2DM, HTN, and dyslipidemia presenting for wellness evaluation. Current concerns include chest pain with shortness of breath for 3 days. Diabetes managed with Metformin 500 mg BID; recent HbA1c 7.2%. HTN managed with Lisinopril 10 mg daily; current BP 148/92. Dyslipidemia managed with Atorvastatin 20 mg daily. Reports high stress and poor sleep quality.",
+                "chronic_conditions": [
+                    {
+                        "condition": "Type 2 Diabetes Mellitus",
+                        "status": "[REVIEW] Active; HbA1c above goal at 7.2%",
+                        "current_management": "Metformin 500 mg BID"
+                    },
+                    {
+                        "condition": "Essential Hypertension",
+                        "status": "[REVIEW] BP elevated at 148/92",
+                        "current_management": "Lisinopril 10 mg daily"
+                    },
+                    {
+                        "condition": "Dyslipidemia",
+                        "status": "[REVIEW] On statin therapy",
+                        "current_management": "Atorvastatin 20 mg daily"
+                    }
+                ]
+            },
+            "ros": {
+                "constitutional": {
+                    "negative_prechecked": [
+                        "fever",
+                        "chills"
+                    ],
+                    "ask": [
+                        "fatigue",
+                        "weight_change"
+                    ]
+                },
+                "cardiovascular": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "chest_pain",
+                        "palpitations",
+                        "edema",
+                        "exercise_tolerance"
+                    ]
+                },
+                "respiratory": {
+                    "negative_prechecked": [
+                        "cough"
+                    ],
+                    "ask": [
+                        "shortness_of_breath",
+                        "wheezing"
+                    ]
+                },
+                "gastrointestinal": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "nausea",
+                        "abdominal_pain",
+                        "bowel_changes"
+                    ]
+                },
+                "endocrine": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "polyuria",
+                        "polydipsia",
+                        "hypoglycemia_symptoms"
+                    ]
+                },
+                "neurologic": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "dizziness",
+                        "syncope",
+                        "headache"
+                    ]
+                },
+                "psychiatric": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "stress",
+                        "sleep_quality",
+                        "anxiety",
+                        "depression"
+                    ]
+                }
+            },
+            "preventive_care_flags": [
+                {
+                    "item": "Urine albumin-to-creatinine ratio (UACR) screening",
+                    "status": "DUE",
+                    "reason": "No UACR result documented within past 12 months for patient with diabetes"
+                }
+            ],
+            "medication_flags": [
+                {
+                    "medication": "Metformin 500 mg BID",
+                    "flag": "Dose unchanged >12 months with HbA1c above range (7.2%)"
+                },
+                {
+                    "medication": "Lisinopril 10 mg daily",
+                    "flag": "Dose unchanged >12 months with BP elevated at 148/92"
+                }
+            ],
+            "lab_trends": [
+                {
+                    "test": "HbA1c",
+                    "current": "7.2%",
+                    "prior": [
+                        "7.5%",
+                        "7.8%"
+                    ],
+                    "trend": "Improving",
+                    "flag": null
+                },
+                {
+                    "test": "Fasting Glucose",
+                    "current": "156 mg/dL",
+                    "prior": [
+                        "142 mg/dL",
+                        "138 mg/dL"
+                    ],
+                    "trend": "Worsening",
+                    "flag": null
+                }
+            ]
+        },
+        "dm_follow_up": {
+            "template_name": "DM Follow-up",
+            "hpi": {
+                "summary": "[REVIEW] Established T2DM diagnosed in 2014 on Metformin 500 mg BID. Recent fasting glucose 156 mg/dL and HbA1c 7.2%, improved from 7.5% on 2026-03-15 and 7.8% on 2025-12-10. Reports poor sleep and high stress. No hypoglycemia documented.",
+                "dm_specific_fields": {
+                    "last_hba1c": "7.2% on 2026-05-21",
+                    "fasting_glucose": "156 mg/dL",
+                    "renal_function": "Creatinine 0.9 mg/dL, eGFR 82",
+                    "complications_documented": "[REVIEW] None documented in chart",
+                    "current_medications": "Metformin 500 mg BID"
+                }
+            },
+            "ros": {
+                "endocrine": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "polyuria",
+                        "polydipsia",
+                        "polyphagia",
+                        "hypoglycemia",
+                        "blurred_vision"
+                    ]
+                },
+                "neurologic": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "neuropathy_symptoms",
+                        "foot_numbness",
+                        "burning_pain"
+                    ]
+                },
+                "cardiovascular": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "chest_pain",
+                        "dyspnea"
+                    ]
+                },
+                "constitutional": {
+                    "negative_prechecked": [
+                        "fever"
+                    ],
+                    "ask": [
+                        "fatigue",
+                        "weight_change"
+                    ]
+                }
+            },
+            "preventive_care_flags": [
+                {
+                    "item": "Urine albumin-to-creatinine ratio (UACR) screening",
+                    "status": "DUE",
+                    "reason": "No UACR documented within prior 12 months"
+                },
+                {
+                    "item": "HbA1c follow-up",
+                    "status": "NOT_DUE",
+                    "reason": "HbA1c completed on 2026-05-21"
+                }
+            ],
+            "medication_flags": [
+                {
+                    "medication": "Metformin 500 mg BID",
+                    "flag": "Dose unchanged >12 months with HbA1c above target"
+                }
+            ],
+            "lab_trends": [
+                {
+                    "test": "HbA1c",
+                    "current": "7.2%",
+                    "prior": "7.5%",
+                    "trend": "Improved by 0.3%",
+                    "flag": null
+                },
+                {
+                    "test": "Fasting Glucose",
+                    "current": "156 mg/dL",
+                    "prior": "142 mg/dL",
+                    "trend": "Increased by 14 mg/dL",
+                    "flag": null
+                }
+            ]
+        },
+        "htn_follow_up": {
+            "template_name": "HTN Follow-up",
+            "hpi": {
+                "summary": "[REVIEW] Established HTN diagnosed in 2018 on Lisinopril 10 mg daily. Current office BP 148/92. Reports stress and poor sleep quality. No smoking or alcohol use documented.",
+                "htn_specific_fields": {
+                    "current_bp": "148/92",
+                    "renal_function": "Creatinine 0.9 mg/dL, eGFR 82",
+                    "current_medication": "Lisinopril 10 mg daily",
+                    "home_bp_monitoring": "[REVIEW] Not documented"
+                }
+            },
+            "ros": {
+                "cardiovascular": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "chest_pain",
+                        "palpitations",
+                        "edema"
+                    ]
+                },
+                "neurologic": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "headache",
+                        "dizziness",
+                        "vision_changes"
+                    ]
+                },
+                "respiratory": {
+                    "negative_prechecked": [
+                        "cough"
+                    ],
+                    "ask": [
+                        "shortness_of_breath"
+                    ]
+                },
+                "constitutional": {
+                    "negative_prechecked": [
+                        "fever"
+                    ],
+                    "ask": [
+                        "fatigue"
+                    ]
+                }
+            },
+            "preventive_care_flags": [
+                {
+                    "item": "Blood pressure monitoring follow-up",
+                    "status": "NOT_DUE",
+                    "reason": "BP recorded on 2026-05-21"
+                }
+            ],
+            "medication_flags": [
+                {
+                    "medication": "Lisinopril 10 mg daily",
+                    "flag": "Dose unchanged >12 months with BP above goal"
+                }
+            ],
+            "lab_trends": [
+                {
+                    "test": "Creatinine",
+                    "current": "0.9 mg/dL",
+                    "trend": "Stable",
+                    "flag": null
+                },
+                {
+                    "test": "eGFR",
+                    "current": "82 mL/min/1.73m2",
+                    "trend": "Stable",
+                    "flag": null
+                }
+            ]
+        },
+        "sick_visit": {
+            "template_name": "Sick Visit",
+            "hpi": {
+                "summary": "[REVIEW] 55-year-old female presenting with 3-day history of persistent central chest pain radiating to left arm with associated shortness of breath, diaphoresis, nausea, and decreased appetite. Pain described as pressure-like and rated 7/10. Symptoms began while working at desk. EKG showed normal sinus rhythm without acute ST changes; Troponin I normal at 0.02 ng/mL. Significant cardiac risk factors include T2DM, HTN, dyslipidemia, and family history of MI.",
+                "acute_symptom_fields": {
+                    "onset": "3 days ago",
+                    "location": "Central chest",
+                    "radiation": "Left arm",
+                    "severity": "7/10",
+                    "associated_symptoms": [
+                        "shortness of breath",
+                        "diaphoresis",
+                        "nausea",
+                        "decreased appetite"
+                    ],
+                    "denied_symptoms": [
+                        "fever",
+                        "cough"
+                    ]
+                }
+            },
+            "ros": {
+                "constitutional": {
+                    "negative_prechecked": [
+                        "fever",
+                        "chills"
+                    ],
+                    "ask": [
+                        "fatigue"
+                    ]
+                },
+                "cardiovascular": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "chest_pain",
+                        "palpitations",
+                        "syncope",
+                        "edema"
+                    ]
+                },
+                "respiratory": {
+                    "negative_prechecked": [
+                        "cough"
+                    ],
+                    "ask": [
+                        "shortness_of_breath",
+                        "wheezing"
+                    ]
+                },
+                "gastrointestinal": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "nausea",
+                        "vomiting"
+                    ]
+                },
+                "psychiatric": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "anxiety",
+                        "stress"
+                    ]
+                }
+            },
+            "preventive_care_flags": [],
+            "medication_flags": [
+                {
+                    "medication": "Lisinopril 10 mg daily",
+                    "flag": "Dose unchanged >12 months with BP elevated at current visit"
+                },
+                {
+                    "medication": "Metformin 500 mg BID",
+                    "flag": "Dose unchanged >12 months with HbA1c above target"
+                }
+            ],
+            "lab_trends": [
+                {
+                    "test": "Troponin I",
+                    "current": "0.02 ng/mL",
+                    "trend": "Normal",
+                    "flag": null
+                },
+                {
+                    "test": "EKG",
+                    "current": "No acute ischemic changes",
+                    "trend": "Normal",
+                    "flag": null
+                }
+            ]
+        },
+        "new_patient": {
+            "template_name": "New Patient",
+            "hpi": {
+                "summary": "[REVIEW] 55-year-old female establishing care with history of T2DM (diagnosed 2014), HTN (diagnosed 2018), and dyslipidemia (diagnosed 2019). Current medications include Metformin 500 mg BID, Lisinopril 10 mg daily, and Atorvastatin 20 mg daily. Presenting complaint includes chest pain and shortness of breath for 3 days with associated diaphoresis and nausea. Reports high stress and poor sleep. Denies smoking, alcohol, and recreational drug use.",
+                "historical_fields": {
+                    "family_history": "Father with MI at age 65; mother with HTN and T2DM",
+                    "allergies": "Penicillin causing nausea and mild rash",
+                    "social_history": "Office Manager; never smoker; no alcohol or recreational drug use",
+                    "recent_testing": "EKG normal; Troponin I normal; HbA1c 7.2%"
+                }
+            },
+            "ros": {
+                "constitutional": {
+                    "negative_prechecked": [
+                        "fever",
+                        "chills"
+                    ],
+                    "ask": [
+                        "fatigue",
+                        "weight_change"
+                    ]
+                },
+                "cardiovascular": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "chest_pain",
+                        "palpitations",
+                        "edema"
+                    ]
+                },
+                "respiratory": {
+                    "negative_prechecked": [
+                        "cough"
+                    ],
+                    "ask": [
+                        "shortness_of_breath",
+                        "wheezing"
+                    ]
+                },
+                "gastrointestinal": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "nausea",
+                        "vomiting",
+                        "abdominal_pain"
+                    ]
+                },
+                "endocrine": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "polyuria",
+                        "polydipsia",
+                        "hypoglycemia"
+                    ]
+                },
+                "neurologic": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "dizziness",
+                        "headache",
+                        "neuropathy"
+                    ]
+                },
+                "psychiatric": {
+                    "negative_prechecked": [],
+                    "ask": [
+                        "stress",
+                        "sleep_quality",
+                        "depression",
+                        "anxiety"
+                    ]
+                }
+            },
+            "preventive_care_flags": [
+                {
+                    "item": "Urine albumin-to-creatinine ratio (UACR) screening",
+                    "status": "DUE",
+                    "reason": "No documented UACR in prior 12 months"
+                }
+            ],
+            "medication_flags": [
+                {
+                    "medication": "Metformin 500 mg BID",
+                    "flag": "Dose unchanged >12 months with HbA1c above target"
+                },
+                {
+                    "medication": "Lisinopril 10 mg daily",
+                    "flag": "Dose unchanged >12 months with BP elevated"
+                }
+            ],
+            "lab_trends": [
+                {
+                    "test": "HbA1c",
+                    "current": "7.2%",
+                    "prior": [
+                        "7.5%",
+                        "7.8%"
+                    ],
+                    "trend": "Improving",
+                    "flag": null
+                },
+                {
+                    "test": "Fasting Glucose",
+                    "current": "156 mg/dL",
+                    "prior": [
+                        "142 mg/dL",
+                        "138 mg/dL"
+                    ],
+                    "trend": "Worsening",
+                    "flag": null
+                }
+            ]
+        }
+    }
+}
